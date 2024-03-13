@@ -1,0 +1,44 @@
+/* CSSリセット */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* 要素のデフォルトの書体を設定 */
+body {
+  line-height: 1;
+}
+
+/* リストのスタイルをリセット */
+ul, ol {
+  list-style: none;
+}
+
+/* a要素のデフォルトのスタイルをリセット */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ボタン要素のスタイルをリセット */
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* その他、ユーザーエージェントによるデフォルトのスタイルをリセットする場合も追加 */
+
+/* 以下、自分で追加のスタイルを記述 */

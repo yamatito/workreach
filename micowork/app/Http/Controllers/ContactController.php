@@ -1,9 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactSendMail; // 修正: クラス名を正しくしてインポート
 
 class ContactController extends Controller
 {
@@ -16,13 +16,9 @@ class ContactController extends Controller
         ]);
 
         $to = 'yamatito0309@gmail.com';
-        $subject = 'お問い合わせフォームからのメッセージ';
-        $messageBody = "お名前: {$validated['name']}\nメールアドレス: {$validated['email']}\nお問い合わせ内容:\n{$validated['message']}";
 
-        Mail::raw($messageBody, function ($message) use ($to, $subject, $validated) {
-            $message->to($to)->subject($subject);
-            $message->from($validated['email']);
-        });
+        // 修正: ContactSendMail Mailableクラスを使用してメールを送信
+        Mail::to($to)->send(new ContactSendMail($validated));
 
         return back()->with('success', 'お問い合わせありがとうございます。メッセージが送信されました。');
     }

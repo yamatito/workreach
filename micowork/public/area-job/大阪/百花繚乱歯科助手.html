@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Micowork</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css"> <!-- reset.cssを読み込む -->
+    <link rel="stylesheet" type="text/css" href="../../css/slide.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<header class="header">
+    <div class="inner">
+        <div class="header-name">
+            <a href="/index.html">
+                <h3 class="header-site">求人情報サイト</h3>
+                <h3 class="header-company-name">Micowork</h3>
+            </a>
+        </div>
+        <!-- <a href="/src/php/process.php" target="_blank" class="new-jobs-button">お問い合わせ</a> -->
+    </div>
+
+
+    <form action="/src/php/data.php" method="GET">
+      <div class="button-group">
+          <ul class="nav-list">
+              <li class="dropdown">
+                  <button class="nav-button no-arrow" name="area" value="">全国</button>
+              </li>
+              <li class="dropdown">
+                  <div class="nav-button">関東</div>
+                  <ul class="dropdown-menu">
+                      <li><button type="submit" name="area" value="茨城">茨城</button></li>
+                      <li><button type="submit" name="area" value="栃木">栃木</button></li>
+                      <li><button type="submit" name="area" value="群馬">群馬</button></li>
+                      <li><button type="submit" name="area" value="埼玉">埼玉</button></li>
+                      <li><button type="submit" name="area" value="千葉">千葉</button></li>
+                      <li><button type="submit" name="area" value="東京">東京</button></li>
+                      <li><button type="submit" name="area" value="神奈川">神奈川</button></li>
+                      <!-- 他のエリアを追加 -->
+                  </ul>
+              </li>
+
+              <li class="dropdown">
+                  <div class="nav-button">関西</div>
+                  <ul class="dropdown-menu">
+                      <li><button type="submit" name="area" value="滋賀">滋賀</button></li>
+                      <li><button type="submit" name="area" value="京都">京都</button></li>
+                      <li><button type="submit" name="area" value="大阪">大阪</button></li>
+                      <li><button type="submit" name="area" value="兵庫">兵庫</button></li>
+                      <li><button type="submit" name="area" value="奈良">奈良</button></li>
+                      <li><button type="submit" name="area" value="和歌山">和歌山</button></li>
+                  </ul>
+              </li>
+
+              <li class="dropdown">
+                  <div class="nav-button">東海</div>
+                  <ul class="dropdown-menu">
+                      <li><button type="submit" name="area" value="岐阜">岐阜</button></li>
+                      <li><button type="submit" name="area" value="静岡">静岡</button></li>
+                      <li><button type="submit" name="area" value="愛知">愛知</button></li>
+                      <li><button type="submit" name="area" value="三重">三重</button></li>
+                  </ul>
+              </li>
+
+              <li class="dropdown">
+                  <li><button class="nav-button no-arrow" type="submit" name="area" value="北海道">北海道</button></li>
+              </li>
+
+              <li class="dropdown">
+                  <div class="nav-button">東北</div>
+                  <ul class="dropdown-menu">
+                      <li><button type="submit" name="area" value="青森">青森</button></li>
+                      <li><button type="submit" name="area" value="岩手">岩手</button></li>
+                      <li><button type="submit" name="area" value="宮城">宮城</button></li>
+                      <li><button type="submit" name="area" value="秋田">秋田</button></li>
+                      <li><button type="submit" name="area" value="山形">山形</button></li>
+                      <li><button type="submit" name="area" value="福島">福島</button></li>
+                  </ul>
+              </li>
+
+              <li class="dropdown">
+                  <div class="nav-button">甲信越・北陸</div>
+                  <ul class="dropdown-menu">
+                      <li><button type="submit" name="area" value="新潟">新潟</button></li>
+                      <li><button type="submit" name="area" value="富山">富山</button></li>
+                      <li><button type="submit" name="area" value="石川">石川</button></li>
+                      <li><button type="submit" name="area" value="福井">福井</button></li>
+                      <li><button type="submit" name="area" value="山梨">山梨</button></li>
+                      <li><button type="submit" name="area" value="長野">長野</button></li>
+                  </ul>
+              </li>
+
+              <li class="dropdown">
+                  <div class="nav-button">中国・四国</div>
+                  <ul class="dropdown-menu">
+                      <li><button type="submit" name="area" value="島根">島根</button></li>
+                      <li><button type="submit" name="area" value="鳥取">鳥取</button></li>
+                      <li><button type="submit" name="area" value="岡山">岡山</button></li>
+                      <li><button type="submit" name="area" value="広島">広島</button></li>
+                      <li><button type="submit" name="area" value="長野">山口</button></li>
+                      <li><button type="submit" name="area" value="徳島">徳島</button></li>
+                      <li><button type="submit" name="area" value="香川">香川</button></li>
+                      <li><button type="submit" name="area" value="愛媛">愛媛</button></li>
+                      <li><button type="submit" name="area" value="高知">高知</button></li>
+                  </ul>
+              </li>
+
+              <li class="dropdown">
+                  <div class="nav-button">九州・沖縄</div>
+                  <ul class="dropdown-menu">
+                      <li><button type="submit" name="area" value="福岡">福岡</button></li>
+                      <li><button type="submit" name="area" value="佐賀">佐賀</button></li>
+                      <li><button type="submit" name="area" value="長崎">長崎</button></li>
+                      <li><button type="submit" name="area" value="熊本">熊本</button></li>
+                      <li><button type="submit" name="area" value="大分">大分</button></li>
+                      <li><button type="submit" name="area" value="宮崎">宮崎</button></li>
+                      <li><button type="submit" name="area" value="鹿児島">鹿児島</button></li>
+                      <li><button type="submit" name="area" value="沖縄">沖縄</button></li>
+                  </ul>
+              </li>
+
+          </ul>
+      </div>
+  </form>
+</header>
+
+
+<div id="job-listing">
+    <div class="job-info">
+        <div class="job-detail">
+            <ul class="genre-list">
+            <li class="genre-1">大阪</li>
+            <li class="genre-2">医療・介護・福祉</li>
+            <li class="genre-3">正社員</li>
+            </ul>
+        <h2 class="job-title">医療法人百花繚乱 / 歯科助手</h2>
+    </div>
+        <img class="job-image" src="/src/detail-img/大阪/医療法人百花繚乱 : 歯科医師.jpeg" alt="求人画像">
+    <p class="job-description"></p>
+    <table class="job-details">
+        <tr>
+            <td>会社名</td>
+            <td>医療法人百花繚乱</td>
+        </tr>
+        <tr>
+            <td>所在地</td>
+            <td>〒569-0025<br>
+                大阪府高槻市藤の里町１９－２４</td>
+        </tr>
+        <tr>
+            <td>勤務地</td>
+            <td>①ほほえみ歯科　大阪府高槻市藤の里町19-24　②大東市ほほえみ歯科　大阪府大東市灰塚2-2-20<br><br>
+
+                ③ひだまり歯科　大阪府大阪市阿倍野区昭和町2-1-3<br><br>
+                
+                ④いろどり歯科　大阪府高槻市大畑町13-1 イオンフードスタイル1階</td>
+        </tr>
+        <tr>
+            <td>職種</td>
+            <td>歯科助手</td>
+        </tr>
+        <tr>
+            <td>アクセス</td>
+            <td>①阪急「高槻市駅」徒歩14分　　　　　　　　<br>
+                高槻市バス/京阪バス「城東町」下車1分　<br><br>
+                
+                ②学研都市線 鴻池新田駅から徒歩で15分　学研都市線 住道駅から徒歩で21分<br><br>
+                
+                ③大阪市営地下鉄御堂筋線 昭和町駅から徒歩で2分<br>
+                大阪市営地下鉄谷町線 文の里駅から徒歩で7分<br>
+                阪堺電軌上町線 松虫駅から徒歩で11分<br><br>
+                
+                ④京都線 摂津富田駅から徒歩で6分 阪急京都本線 富田駅から徒歩で8分 阪急京都本線 総持寺駅から徒歩で18分
+            </td>
+        </tr>
+        <tr>
+            <td>雇用形態</td>
+            <td>正社員</td>
+        </tr>
+        <tr>
+            <td>仕事内容</td>
+            <td>①歯科助手・治療のアシスト業務だけではなく、器具の準備や滅菌、<br>
+                発注や患者さんへのコンサルなど幅広い業務に携わって頂きます。<br>
+                将来的には受付業務に携わっていただく場合がございます。<br><br>
+                
+                ブランクがあるという方や未経験の方も歓迎しています！<br>
+                歯科未経験の方からすると初めてのことで難しく思われるかもしれませんが、<br>
+                当院では、未経験からのスタートしたスタッフも多いですが、今では一人前になっています。<br><br>
+                
+                マニュアルもあり丁寧にお教えしますのでご安心ください。<br><br>
+                
+                ②★歯科助手業務全般★<br>
+                受付業務や歯科医師がスムーズに働けるように補助業務（アシスタント）を行っていただくお仕事です。<br>
+                主な業務は、<br>
+                ・電話対応<br>
+                ・受付にて患者様対応<br>
+                ・会計業務<br>
+                ・患者様のご案内<br>
+                ・医療施術器具の準備、清掃、器具の片づけ<br>
+                ・診療のアシスト<br>
+                ・カルテへの記入<br>
+                ・滅菌・石膏流し<br>
+                ・備品の発注<br>
+                ・院内の清掃<br>
+                になります。また、患者様とも接する機会も多くあり、ドクターと患者様の懸け橋として安心出来る環境づくりも重要なお仕事になります。<br>
+                業務はスタッフみんなで分担して行います^^<br><br>
+                
+                ③歯科医師・歯科衛生士の診療補助など<br>
+                一般受付業務、電話応対、アポイント管理。<br>
+                歯科医師・歯科衛生士の診療補助など<br>
+                書類管理、外部業者との対応。器材管理や人事管理<br>
+                院内・院外清掃業務、器材の洗浄や備品補充など<br><br>
+                
+                ④歯科助手、受付スタッフ業務<br>
+                ・先生のサポートや診療準備<br>
+                ・予約確認<br>
+                ・カルテ入力<br>
+                ・受付対応や電話対応など
+            </td>
+        </tr>
+        <tr>
+            <td>給与</td>
+            <td>①【正職員】 月給 220,000円 〜　【パート・バイト】  時給 1,070円 〜<br><br>
+
+                ②【正職員】 月給 220,000円 〜　【パート・バイト】 時給 1,064円 〜 1,200円<br><br>
+                
+                ③【正職員】 月給 220,000円 〜	<br><br>
+                
+                ④【正職員】 月給 220,000円 〜	【パート・バイト】 時給 1,070円 〜</td>
+        </tr>
+        <tr>
+            <td>待遇</td>
+            <td>①社保完備（雇用保険・労災保険・健康保険・厚生年金）<br>
+                セミナー代補助有り<br>
+                乳がん検診・HBV補助有り<br>
+                マイカー通勤OK（ガソリン代支給）<br>
+                バイク・自転車通勤OK<br><br>
+                
+                ②〇昇給年1回、賞与年2回<br>
+                〇社会保険完備　※雇用保険、労災、協会けんぽ、厚生年金加入<br>
+                〇院内外研修制度あり<br>
+                〇交通費全額支給<br>
+                〇制服貸与（シューズはご持参ください）<br><br>
+                
+                ③社保完備（雇用保険・労災保険・健康保険・厚生年金）<br>
+                引っ越し代全額負担♪遠方から転勤などご検討頂いている方にもしっかり補償致します♪<br>
+                セミナー代補助有り<br>
+                半年勤務後5000円の追加手当有り<br>
+                乳がん検診・HBV補助有り<br>
+                マイカー通勤OK（ガソリン代支給）<br>
+                バイク・自転車通勤OK<br><br>
+                
+                ④社会保険完備<br>
+                車通勤可（ガソリン代支給）<br>
+                研修ルームあり（実習や勉強会を実施/費用一部支給）<br>
+                広々としたスタッフルーム･個人ロッカーあり</td>
+        </tr>
+        <tr>
+            <td>勤務時間</td>
+            <td>①（正）平日　9:00～13:00/14:00～19:00<br>
+                土・日　9:00～13:00/14:00～18:00<br>
+                休憩60分<br><br>
+                
+                ②（正）	平　日　午前診/9:45～13:00　午後診/15:00～20:00　<br>
+                土曜日　午前診/9:45～13:00　午後診/15:00～18：00<br>
+                ※13：00～15：00は休憩<br><br>
+                
+                ・残業はほぼありません（月1時間程度）<br><br>
+                
+                ③月火水木金　9:00～19:00<br>
+                土日　9:00～18:00<br>
+                休憩60分<br><br>
+                
+                ④（正）月火水木金<br>
+                9:00～13:00/14:00～19:00<br>
+                土･日<br>
+                9:00～13:00/14:00～18:00<br>
+                休憩60分<br>
+                (朝の準備のため、出勤時間は8:30となります。その時間は前残業扱いで1分単位で残業代を支給します)
+                
+            </td>
+        </tr>
+        <tr>
+            <td>募集条件</td>
+            <td>無資格可<br>
+                未経験大歓迎ですので是非ご気軽にご応募下さい！！<br>
+                色んな働き方も相談可能ですのでご気軽にご応募下さい！！
+            </td>
+        </tr>
+        <tr>
+            <td>休日/休暇</td>
+            <td>①（正）完全週休2.5日（シフト制）祝日　（パ）勤務日数は応相談　祝日：休診日<br><br>
+
+                ②完全週休2日制／日曜･祝日に加え､シフトで平日1日　※勤務希望の曜日なども伺います！<br>
+                ※令和5年11月頃（準備が整い次第）変更予定　（パ）完全週休2日制／日曜･祝日に加え､シフトで平日1日<br>
+                ※勤務希望の曜日なども伺います！<br><br>
+                
+                ③祝<br><br>
+                
+                ④（正）月に11日＋祝日が休みです！　祝日、休診日　シフト制　（パ）祝日　他応相談
+            </td>
+        </tr>
+        <tr>
+            <td>応募方法</td>
+            <td>面接（予定1回）</td>
+        </tr>
+        <tr>
+            <td>面接地</td>
+            <td>〒455-0804<br>
+                愛知県名古屋市港区当知２丁目１５０１番地ポートウォークみなと</td>
+        </tr>
+        <tr>
+            <td>受付担当</td>
+            <td>早田</td>
+        </tr>
+    </table>
+    <p class="call">応募先電話番号：<a href="tel:090-9585-7601">090-9585-7601</a></p>
+    
+
+<!--
+    <p class="email">メールで応募する：<a href="mailto:masaki.yfc.niwa@furukawaelectric.com">masaki.yfc.niwa@furukawaelectric.com</a></p>
+-->
+    </div>
+  </div>
+
+
+
+
+
+   <!--フッターーーーーーーーーーーーーーーーーーーーーーーーーーー-->
+
+    
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-name">
+            <h3 class="footer-site">求人情報サイト</h3>
+            <h3 class="footer-company-neme">Micowork</h3>
+            <div class="policy"><a href="/policy.html">プライバシーポリシー</a></div>
+            <div class="link"><a href="/company.html">運営会社</a></div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- 一番上に戻るボタン -->
+<button class="scroll-to-top-button">
+<i class="fa-regular fa-chevron-down fa-rotate-180"></i>
+</button>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- ここでSlickライブラリをCDNから読み込む -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- ここでRemodalライブラリをCDNから読み込む -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+
+<!-- ここでstyle.jsを読み込む -->
+<script src="/src/js/style.js"></script>
+
+</body>
+</html>

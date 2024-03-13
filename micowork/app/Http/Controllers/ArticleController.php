@@ -6,19 +6,36 @@ use Carbon\Carbon;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
+use Illuminate\Pagination\LengthAwarePaginator;
 
 
 class ArticleController extends Controller
 {
     public function index()
     {
+        // Articleモデルからデータを取得
         $articles = Article::where('status', true)
             ->orderBy('created_at', 'desc')
             ->paginate(3);
-        $data = ['articles' => $articles];
+
+        // XMLファイルのパス
+        $xmlPath = storage_path('xml/data.xml');
+
+        // XMLファイルの読み込み
+        $xmlString = File::get($xmlPath);
+        $xml = simplexml_load_string($xmlString);
+
+        // ビューに渡すデータ
+        $data = [
+            'articles' => $articles, // Articleモデルからのデータ
+            'xmlArticles' => $xml->job // XMLファイルからのデータ
+        ];
+
         return view('HTML.index', $data);
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -27,24 +44,24 @@ class ArticleController extends Controller
     public function adminindex(Request $request)
     {
         $order = $request->input('order', 'newest'); // デフォルトは最新順
-    
+
         $query = Article::query();
-    
+
         switch ($order) {
             case 'oldest':
                 $query->orderBy('created_at', 'asc');
                 break;
-                case 'status_unset':
-                    // statusがfalseのみを選択して表示
-                    $query->where('status', 0)->orderBy('created_at', 'desc');
-                    break;
-                
+            case 'status_unset':
+                // statusがfalseのみを選択して表示
+                $query->where('status', 0)->orderBy('created_at', 'desc');
+                break;
+
             default:
                 // 最新順
                 $query->orderBy('created_at', 'desc');
                 break;
         }
-    
+
         $articles = $query->paginate(10);
         $data = [
             'articles' => $articles,
@@ -52,27 +69,30 @@ class ArticleController extends Controller
         ];
         return view('articles.index', $data);
     }
-    
-    
 
 
     public function search(Request $request)
     {
-        // ユーザーからの入力を受け取る
-        $query = Article::query(); // クエリビルダーのインスタンスを取得
-
+        $query = Article::query();
+    
         if ($request->filled('area')) {
-            $query->where('area', $request->area);
+            $area = str_replace('県', '', $request->area);
+            $searchAreas = [$request->area, $area . '県', $area . '都', $area . '府', $area . '道'];
+            $query->where(function ($q) use ($searchAreas) {
+                foreach ($searchAreas as $area) {
+                    $q->orWhere('area', 'like', '%' . $area . '%');
+                }
+            });
         }
-
+    
         if ($request->filled('job_title')) {
             $query->where('job_title', 'like', '%' . $request->job_title . '%');
         }
-
+    
         if ($request->filled('employment_type')) {
             $query->where('employment_type', $request->employment_type);
         }
-
+    
         if ($request->filled('keyword')) {
             $query->where(function ($q) use ($request) {
                 $q->where('company_name', 'like', '%' . $request->keyword . '%')
@@ -80,15 +100,52 @@ class ArticleController extends Controller
                     ->orWhere('address', 'like', '%' . $request->keyword . '%');
             });
         }
+    
+        $articles = $query->where('status', true)->orderBy('created_at', 'desc')->simplePaginate(10);
+    
+        // XMLファイルの読み込みとフィルタリング
+        $xmlPath = storage_path('xml/data.xml');
+        $xmlString = File::get($xmlPath);
+        $xml = simplexml_load_string($xmlString);
+    
+        $filteredXmlJobs = [];
+        $areaBase = $request->filled('area') ? str_replace(['県', '都', '府', '道'], '', $request->area) : '';
+    
+        foreach ($xml->job as $job) {
+            $matchesArea = true;
+            if ($request->filled('area')) {
+                $matchesArea = stripos($job->area, $request->area) !== false || stripos($job->area, $areaBase) !== false;
+            }
+            $matchesJobTitle = $request->filled('job_title') ? stripos($job->title, $request->job_title) !== false : true;
+            $matchesEmploymentType = $request->filled('employment_type') ? stripos($job->employmentType, $request->employment_type) !== false : true;
+            $matchesKeyword = $request->filled('keyword') ? (stripos($job->search, $request->keyword) !== false || stripos($job->description, $request->keyword) !== false) : true;
+    
+            if ($matchesArea && $matchesJobTitle && $matchesEmploymentType && $matchesKeyword) {
+                $filteredXmlJobs[] = $job;
+            }
+        }
 
-        // statusがtrueの記事のみを取得
-        $articles = $query->where('status', true)->orderBy('created_at', 'desc')->simplePaginate(5);
+        // ページネーション用のコレクションを作成
+        // $filteredXmlJobsCollection = collect($filteredXmlJobs);
+    // フィルタリング後のXMLジョブをシャッフル
+$filteredXmlJobsCollection = collect($filteredXmlJobs)->shuffle();
 
-        // 検索結果をビューに渡す
-        return view('job.search', ['articles' => $articles]);
+        $page = $request->input('page', 1);
+        $perPage = 10; // XMLのページネーション設定
+        $currentPageItems = $filteredXmlJobsCollection->slice(($page - 1) * $perPage, $perPage)->values()->all();
+        $paginatedXmlJobs = new LengthAwarePaginator($currentPageItems, count($filteredXmlJobsCollection), $perPage, $page, [
+            'path' => $request->url(),
+            'query' => $request->query(),
+        ]);
+    
+        $data = [
+            'articles' => $articles,
+            'xmlArticles' => $paginatedXmlJobs,
+        ];
+    
+        return view('job.search', $data);
     }
-
-
+    
 
 
 
@@ -118,10 +175,11 @@ class ArticleController extends Controller
             'address' => 'nullable|string|max:255',
             'work_location' => 'nullable|string|max:255',
             'job_title' => 'nullable|string|max:255',
+            'job_title_description' => 'nullable|string|max:255',
             'access' => 'nullable|string',
             'employment_type' => 'nullable|string|max:255',
             'job_description' => 'nullable|string',
-            'salary' => 'nullable|string|max:255',
+            'salary' => 'nullable|string',
             'working_hours' => 'nullable|string|max:255',
             'recruitment_conditions' => 'nullable|string',
             'holidays' => 'nullable|string',
@@ -139,6 +197,7 @@ class ArticleController extends Controller
         $article->address = $request->address;
         $article->work_location = $request->work_location;
         $article->job_title = $request->job_title;
+        $article->job_title_description = $request->job_title_description;
         $article->access = $request->access;
         $article->employment_type = $request->employment_type;
         $article->job_description = $request->job_description;
@@ -152,17 +211,16 @@ class ArticleController extends Controller
         $article->receptionist = $request->receptionist;
         $article->application_contact = $request->application_contact;
 
-        if ($request->hasFile('image_path')) {
-            // $image = $request->file('image_path');
-            // $filename = $request->company_name . '_' . date('Ymd') . '.' . $image->getClientOriginalExtension();
-            // $path = $image->storeAs('public/images', $filename);
-            // $article->image_path = $path;
-            $file = $request->file('image_path');
+        if ($request->hasFile('new_image')) {
+            // 新しい画像がアップロードされた場合の処理
+            $file = $request->file('new_image');
             $date = Carbon::now()->format('Ymd');
             $fileName = $file->getClientOriginalName();
             $imageName = $date . '_' . $fileName;
-            $path = $file->storeAs('public/images/articlesImg', $imageName);
-            $article->image_path = $imageName;
+            // 保存先のパスを設定
+            $destinationPath = public_path('images/articlesImg');
+            $file->move($destinationPath, $imageName);
+            $article->image_path = $imageName; // データベースに保存するパスを修正
         } else {
             $article->image_path = $request->image_path;
         }
@@ -186,6 +244,12 @@ class ArticleController extends Controller
     {
         $data = ['article' => $article];
         return view('articles.adminshow', $data);
+    }
+
+    public function testshow(Article $article)
+    {
+        $data = ['article' => $article];
+        return view('test.show', $data);
     }
 
     public function show(Article $article)
@@ -224,10 +288,11 @@ class ArticleController extends Controller
             'address' => 'nullable|string|max:255',
             'work_location' => 'nullable|string|max:255',
             'job_title' => 'nullable|string|max:255',
+            'job_title_description' => 'nullable|string|max:255',
             'access' => 'nullable|string',
             'employment_type' => 'nullable|string|max:255',
             'job_description' => 'nullable|string',
-            'salary' => 'nullable|string|max:255',
+            'salary' => 'nullable|string',
             'working_hours' => 'nullable|string|max:255',
             'recruitment_conditions' => 'nullable|string',
             'holidays' => 'nullable|string',
@@ -246,6 +311,7 @@ class ArticleController extends Controller
         $article->address = $request->address;
         $article->work_location = $request->work_location;
         $article->job_title = $request->job_title;
+        $article->job_title_description = $request->job_title_description;
         $article->access = $request->access;
         $article->employment_type = $request->employment_type;
         $article->job_description = $request->job_description;
@@ -259,18 +325,23 @@ class ArticleController extends Controller
         $article->receptionist = $request->receptionist;
         $article->application_contact = $request->application_contact;
 
+
+
         // 新しい画像がアップロードされた場合の処理
         if ($request->hasFile('new_image')) {
             $file = $request->file('new_image');
             $date = Carbon::now()->format('Ymd');
             $fileName = $file->getClientOriginalName();
             $imageName = $date . '_' . $fileName;
-            $path = $file->storeAs('public/images/articlesImg', $imageName); // ストレージのパスを修正
+            // 保存先のパスを設定
+            $destinationPath = public_path('images/articlesImg');
+            $file->move($destinationPath, $imageName);
             $article->image_path = $imageName; // データベースに保存するパスを修正
         } else {
             // 変更がない場合、隠しフィールドから既存の画像名を取得
             $article->image_path = $request->input('previous_image');
         }
+
 
         $article->status = $request->status;
 
@@ -280,12 +351,12 @@ class ArticleController extends Controller
 
 
     public function activate(Request $request, Article $article)
-{
-    $article->status = true; // statusを有効にする
-    $article->save(); // 変更を保存
+    {
+        $article->status = true; // statusを有効にする
+        $article->save(); // 変更を保存
 
-    return back()->with('success', '記事のステータスを有効にしました。');
-}
+        return back()->with('success', '記事のステータスを有効にしました。');
+    }
 
 
     /**

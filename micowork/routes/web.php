@@ -3,10 +3,28 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\ContactController;
 
-Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+// Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+
+use Illuminate\Support\Facades\File; // この行を追加
+
+Route::get('/area-job/{prefecture}/{jobType}.html', function ($prefecture, $jobType) {
+    $path = resource_path("views/area-job/{$prefecture}/{$jobType}.html");
+    if (!File::exists($path)) {
+        abort(404); 
+    }
+    $content = File::get($path); 
+    return response($content)->header('Content-Type', 'text/html'); 
+})->where(['prefecture' => '[ぁ-んァ-ヶa-zA-Z]+', 'jobType' => '[ぁ-んァ-ヶa-zA-Z]+']);
+
+
+// Route::get('html', function () {
+//     $path = resource_path('views/area-job/愛知/アイファルマ.html');
+//     return response()->file($path);
+// })->name('admin');
+
+
 
 
 Route::get('admin', function () {
@@ -26,11 +44,28 @@ Route::get('contact', function () {
 })->name('contact'); 
 
 
+Route::post('/contact/send', [ContactController::class, 'send'])->name('send');
+
 
 Route::get('/job/{article}', [ArticleController::class, 'show'])->name('job.show');
 Route::get('/', [ArticleController::class, 'index'])->name('job.index');
 
 Route::get('/search', [ArticleController::class, 'search'])->name('job.search');
+
+
+Route::get('/index.html', [ArticleController::class, 'index'])->name('job.index');
+
+Route::get('/policy.html', function () {
+    return view('HTML.policy');
+})->name('policy'); 
+
+Route::get('company.html', function () {
+    return view('HTML.company');
+})->name('company'); 
+
+
+
+Route::get('/test/{article}', [ArticleController::class, 'testshow'])->name('test.show');
 
 
 
@@ -48,7 +83,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::post('/articles/{article}/activate',  [ArticleController::class, 'activate'])->name('articles.activate');
 
-    Route::get('/auth/register', function () {
+    Route::get('register', function () {
         return view('auth.register');
     })->name('register'); 
     

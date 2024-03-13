@@ -14,16 +14,12 @@
     <a class="mt-10  p-3 bg-gray-800 rounded-full text-white font-bold" href="{{ route('home') }}">ホーム</a>
 
 </div>
-
-
-
-
 @foreach ($articles as $article)
 
 <div class="mt-16 space-y-20 lg:mt-10 lg:space-y-10">
     <article class="relative isolate flex flex-col gap-8 lg:flex-row bg-gray-300 p-4 rounded-xl">
         <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-            <img src="{{ asset('storage/images/articlesImg/' . $article->image_path) }}" alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+            <img src="{{ asset('images/articlesImg/' . $article->image_path) }}" alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
             <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
         </div>
         <div>

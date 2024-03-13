@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mico work</title>
 
-    <link rel="stylesheet"   href="{{ asset('css/reset.css') }}"> <!-- reset.cssを読み込む -->
+    <link rel="stylesheet"   href="{{ asset('css/reset.css') }}"> 
     <link rel="stylesheet"  href="{{ asset('css/style.css') }}">
     <link rel="stylesheet"  href="{{ asset('css/company.css') }}">
     <link rel="stylesheet"  href="{{ asset('css/slide.css') }}">
+    <link rel="stylesheet"   href="{{ asset('css/genre.css') }}"> 
+
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,7 +28,6 @@
                     <h3 class="header-company-name">Micowork</h3>
                 </a>
             </div>
-            <a href="contact" target="_blank" class="new-jobs-button">お問い合わせ</a>
         </div>
 
         <form action="{{ route('job.search') }}" method="GET">

@@ -6,7 +6,7 @@
     <!--
     <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <title>求人情報</title>
-    <link rel="stylesheet" type="text/css" href="/src/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
     <link rel="stylesheet" type="text/css" href="/src/css/genre.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micowork</title>
+    <meta name="description" content="理想のお仕事がきっと見つかる！">
+    <link rel="stylesheet" type="text/css" href="src/css/reset.css"> <!-- reset.cssを読み込む -->
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="inner">
+            <div class="header-name">
+                <a href="index.html">
+                    <h3 class="header-site">求人情報サイト</h3>
+                    <h3 class="header-company-name">Micowork</h3>
+                </a>
+            </div>
+            <!-- <a href="/src/php/process.php" target="_blank" class="new-jobs-button">お問い合わせ</a> -->
+        </div>
+
+    <form action="/src/php/data.php" method="GET">
+        <div class="button-group">
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <button class="nav-button no-arrow" name="area" value="">全国</button>
+                </li>
+                <li class="dropdown">
+                    <div class="nav-button">関東</div>
+                    <ul class="dropdown-menu">
+                        <li><button type="submit" name="area" value="茨城">茨城</button></li>
+                        <li><button type="submit" name="area" value="栃木">栃木</button></li>
+                        <li><button type="submit" name="area" value="群馬">群馬</button></li>
+                        <li><button type="submit" name="area" value="埼玉">埼玉</button></li>
+                        <li><button type="submit" name="area" value="千葉">千葉</button></li>
+                        <li><button type="submit" name="area" value="東京">東京</button></li>
+                        <li><button type="submit" name="area" value="神奈川">神奈川</button></li>
+                        <!-- 他のエリアを追加 -->
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <div class="nav-button">関西</div>
+                    <ul class="dropdown-menu">
+                        <li><button type="submit" name="area" value="滋賀">滋賀</button></li>
+                        <li><button type="submit" name="area" value="京都">京都</button></li>
+                        <li><button type="submit" name="area" value="大阪">大阪</button></li>
+                        <li><button type="submit" name="area" value="兵庫">兵庫</button></li>
+                        <li><button type="submit" name="area" value="奈良">奈良</button></li>
+                        <li><button type="submit" name="area" value="和歌山">和歌山</button></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <div class="nav-button">東海</div>
+                    <ul class="dropdown-menu">
+                        <li><button type="submit" name="area" value="岐阜">岐阜</button></li>
+                        <li><button type="submit" name="area" value="静岡">静岡</button></li>
+                        <li><button type="submit" name="area" value="愛知">愛知</button></li>
+                        <li><button type="submit" name="area" value="三重">三重</button></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <li><button class="nav-button no-arrow" type="submit" name="area" value="北海道">北海道</button></li>
+                </li>
+
+                <li class="dropdown">
+                    <div class="nav-button">東北</div>
+                    <ul class="dropdown-menu">
+                        <li><button type="submit" name="area" value="青森">青森</button></li>
+                        <li><button type="submit" name="area" value="岩手">岩手</button></li>
+                        <li><button type="submit" name="area" value="宮城">宮城</button></li>
+                        <li><button type="submit" name="area" value="秋田">秋田</button></li>
+                        <li><button type="submit" name="area" value="山形">山形</button></li>
+                        <li><button type="submit" name="area" value="福島">福島</button></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <div class="nav-button">甲信越・北陸</div>
+                    <ul class="dropdown-menu">
+                        <li><button type="submit" name="area" value="新潟">新潟</button></li>
+                        <li><button type="submit" name="area" value="富山">富山</button></li>
+                        <li><button type="submit" name="area" value="石川">石川</button></li>
+                        <li><button type="submit" name="area" value="福井">福井</button></li>
+                        <li><button type="submit" name="area" value="山梨">山梨</button></li>
+                        <li><button type="submit" name="area" value="長野">長野</button></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <div class="nav-button">中国・四国</div>
+                    <ul class="dropdown-menu">
+                        <li><button type="submit" name="area" value="島根">島根</button></li>
+                        <li><button type="submit" name="area" value="鳥取">鳥取</button></li>
+                        <li><button type="submit" name="area" value="岡山">岡山</button></li>
+                        <li><button type="submit" name="area" value="広島">広島</button></li>
+                        <li><button type="submit" name="area" value="長野">山口</button></li>
+                        <li><button type="submit" name="area" value="徳島">徳島</button></li>
+                        <li><button type="submit" name="area" value="香川">香川</button></li>
+                        <li><button type="submit" name="area" value="愛媛">愛媛</button></li>
+                        <li><button type="submit" name="area" value="高知">高知</button></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <div class="nav-button">九州・沖縄</div>
+                    <ul class="dropdown-menu">
+                        <li><button type="submit" name="area" value="福岡">福岡</button></li>
+                        <li><button type="submit" name="area" value="佐賀">佐賀</button></li>
+                        <li><button type="submit" name="area" value="長崎">長崎</button></li>
+                        <li><button type="submit" name="area" value="熊本">熊本</button></li>
+                        <li><button type="submit" name="area" value="大分">大分</button></li>
+                        <li><button type="submit" name="area" value="宮崎">宮崎</button></li>
+                        <li><button type="submit" name="area" value="鹿児島">鹿児島</button></li>
+                        <li><button type="submit" name="area" value="沖縄">沖縄</button></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </form>
+    </header>
+
+    <main>
+
+        <div class="top-photo">
+            <img src="src/img/top-photo.jpg" alt="画像1">
+        </div>
+
+        <div class="title-bar">
+            <img src="src/img/求人検索.png" alt="求人検索">
+        </div>
+
+
+        <div class="search-bar">
+            <form action="/src/php/search.php" method="GET">
+
+                <div class="content-title">
+                    <i class="fas fa-search"></i> 
+                    <h2 class="search-title">求人検索</h2>
+                </div>
+                
+            <div class="search-all">
+                <div class="search-container">
+                <div class="keyword-search">
+                    <h3>キーワード</h3>
+                    <input type="text" class="search-input" name="keyword" placeholder="キーワードで検索">
+                </div>
+                
+                <div class="area-search">
+                    <h3>エリアから選ぶ</h3>
+                <select class="search-select" name="area">
+                    <option value="" selected="selected">エリアから選ぶ</option>
+                    <option class="level-0" value="全国">全国</option>
+                    <option class="level-1" value="北海道">&nbsp;&nbsp;&nbsp;北海道</option>
+                    <option class="level-1" value="東北">&nbsp;&nbsp;&nbsp;東北</option>
+                    <option class="level-2" value="青森">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青森県</option>
+                    <option class="level-2" value="秋田">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;秋田県</option>
+                    <option class="level-2" value="山形">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;山形県</option>
+                    <option class="level-2" value="岩手">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;岩手県</option>
+                    <option class="level-2" value="宮城">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宮城県</option>
+                    <option class="level-2" value="福島">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;福島県</option>
+                    <option class="level-1" value="関東">&nbsp;&nbsp;&nbsp;関東</option>
+                    <option class="level-2" value="東京">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;東京都</option>
+                    <option class="level-2" value="神奈川">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;神奈川県</option>
+                    <option class="level-2" value="千葉">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;千葉県</option>
+                    <option class="level-2" value="埼玉">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;埼玉県</option>
+                    <option class="level-2" value="茨城">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;茨城県</option>
+                    <option class="level-2" value="群馬">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;群馬県</option>
+                    <option class="level-2" value="栃木">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;栃木県</option>
+                    <option class="level-1" value="北陸・甲信越">&nbsp;&nbsp;&nbsp;北陸・甲信越</option>
+                    <option class="level-2" value="新潟">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新潟県</option>
+                    <option class="level-2" value="山梨">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;山梨県</option>
+                    <option class="level-2" value="長野">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;長野県</option>
+                    <option class="level-2" value="富山">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;富山県</option>
+                    <option class="level-2" value="石川">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;石川県</option>
+                    <option class="level-2" value="福井">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;福井県</option>
+                    <option class="level-1" value="東海">&nbsp;&nbsp;&nbsp;東海</option>
+                    <option class="level-2" value="静岡">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;静岡県</option>
+                    <option class="level-2" value="愛知">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;愛知県</option>
+                    <option class="level-2" value="三重">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三重県</option>
+                    <option class="level-2" value="岐阜">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;岐阜県</option>
+                    <option class="level-1" value="近畿">&nbsp;&nbsp;&nbsp;近畿</option>
+                    <option class="level-2" value="大阪">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大阪府</option>
+                    <option class="level-2" value="京都">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京都府</option>
+                    <option class="level-2" value="奈良">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;奈良県</option>
+                    <option class="level-2" value="和歌山">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;和歌山県</option>
+                    <option class="level-2" value="滋賀">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;滋賀県</option>
+                    <option class="level-2" value="兵庫">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;兵庫県</option>
+                    <option class="level-1" value="中国・四国">&nbsp;&nbsp;&nbsp;中国・四国</option>
+                    <option class="level-2" value="岡山">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;岡山県</option>
+                    <option class="level-2" value="広島">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;広島県</option>
+                    <option class="level-2" value="鳥取">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鳥取県</option>
+                    <option class="level-2" value="島根">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;島根県</option>
+                    <option class="level-2" value="山口">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;山口県</option>
+                    <option class="level-2" value="香川">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;香川県</option>
+                    <option class="level-2" value="徳島">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徳島県</option>
+                    <option class="level-2" value="愛媛">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;愛媛県</option>
+                    <option class="level-2" value="高知">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高知県</option>
+                    <option class="level-1" value="九州・沖縄">&nbsp;&nbsp;&nbsp;九州・沖縄</option>
+                    <option class="level-2" value="福岡">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;福岡県</option>
+                    <option class="level-2" value="長崎">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;長崎県</option>
+                    <option class="level-2" value="佐賀">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佐賀県</option>
+                    <option class="level-2" value="宮崎">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宮崎県</option>
+                    <option class="level-2" value="熊本">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熊本県</option>
+                    <option class="level-2" value="大分">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大分県</option>
+                    <option class="level-2" value="鹿児島">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鹿児島県</option>
+                    <option class="level-2" value="沖縄">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;沖縄県</option>
+                </select>
+                </div>
+    
+    
+                <div class="area-search">
+                    <h3>職種から選ぶ</h3>
+
+                <select class="search-select" name="jobtype">
+                    <option value="">職種から選ぶ</option>
+                    <option value="全職種">全業種</option>
+                    <option value="事務">&nbsp;&nbsp;&nbsp;事務</option>
+                    <option value="軽作業">&nbsp;&nbsp;&nbsp;軽作業</option>
+                    <option value="販売・接客">&nbsp;&nbsp;&nbsp;販売・接客</option>
+                    <option value="フード・飲食">&nbsp;&nbsp;&nbsp;フード・飲食</option>
+                    <option value="サービス">&nbsp;&nbsp;&nbsp;サービス</option>
+                    <option value="物流・運輸">&nbsp;&nbsp;&nbsp;物流・運輸</option>
+                    <option value="教育">&nbsp;&nbsp;&nbsp;教育</option>
+                    <option value="エンタメ">&nbsp;&nbsp;&nbsp;エンタメ</option>
+                    <option value="イベント">&nbsp;&nbsp;&nbsp;イベント</option>
+                    <option value="クリエイティブ">&nbsp;&nbsp;&nbsp;クリエイティブ</option>
+                    <option value="理美容">&nbsp;&nbsp;&nbsp;理美容</option>
+                    <option value="IT・コンピューター">&nbsp;&nbsp;&nbsp;IT・コンピューター</option>
+                    <option value="営業">&nbsp;&nbsp;&nbsp;営業</option>
+                    <option value="建築・土木">&nbsp;&nbsp;&nbsp;建築・土木</option>
+                    <option value="医療・介護・福祉">&nbsp;&nbsp;&nbsp;医療・介護・福祉</option>
+                    <option value="製造">&nbsp;&nbsp;&nbsp;製造</option>
+                    <option value="不動産">&nbsp;&nbsp;&nbsp;不動産</option>
+                    <option value="ドライバー">&nbsp;&nbsp;&nbsp;ドライバー</option>
+                    <option value="管理職">&nbsp;&nbsp;&nbsp;管理職</option>
+                    <option value="警備">&nbsp;&nbsp;&nbsp;警備</option>
+                    <option value="冠婚葬祭">&nbsp;&nbsp;&nbsp;冠婚葬祭</option>
+                    <option value="獣医師・動物看護士">&nbsp;&nbsp;&nbsp;獣医師・動物看護士</option>
+                    <option value="整備士・車関係">&nbsp;&nbsp;&nbsp;整備士・車関係</option>
+                    <option value="清掃業">&nbsp;&nbsp;&nbsp;清掃業</option>
+                    <option value="配達">&nbsp;&nbsp;&nbsp;配達</option>
+                    <option value="調理">&nbsp;&nbsp;&nbsp;調理</option>
+                    <option value="農業">&nbsp;&nbsp;&nbsp;農業</option>
+                    <option value="引越し">&nbsp;&nbsp;&nbsp;引越し</option>
+                    <option value="リサイクル">&nbsp;&nbsp;&nbsp;リサイクル</option>
+                    <option value="受付">&nbsp;&nbsp;&nbsp;受付</option>
+                    <option value="電気・設備">&nbsp;&nbsp;&nbsp;電気・設備</option>
+                    <option value="整体">&nbsp;&nbsp;&nbsp;整体</option>
+                    <option value="マッサージ・リラク">&nbsp;&nbsp;&nbsp;マッサージ・リラク</option>
+                    <option value="保育士">&nbsp;&nbsp;&nbsp;保育士</option>
+                    <option value="スポーツ施設">&nbsp;&nbsp;&nbsp;スポーツ施設</option>
+                    <option value="整体師">&nbsp;&nbsp;&nbsp;整体師</option>
+                    <option value="トリマー">&nbsp;&nbsp;&nbsp;トリマー</option>
+                    <option value="塾">&nbsp;&nbsp;&nbsp;塾</option>
+                    <option value="塗装">&nbsp;&nbsp;&nbsp;塗装</option>
+                    <option value="漁業">&nbsp;&nbsp;&nbsp;漁業</option>
+                    <option value="機械・メンテナンス">&nbsp;&nbsp;&nbsp;機械・メンテナンス</option>
+                    <option value="その他">&nbsp;&nbsp;&nbsp;その他</option>
+                </select>
+
+                </div>
+                
+                
+    
+                <div class="area-search">
+                <h3>雇用形態から選ぶ</h3>
+
+                <select class="search-select" name="employmentType">
+                    <option value="">雇用形態から選ぶ</option>
+                    <option value="全雇用形態">全雇用形態</option>
+                    <option value="正社員">&nbsp;&nbsp;&nbsp;正社員</option>
+                    <option value="契約社員">&nbsp;&nbsp;&nbsp;契約社員</option>
+                    <option value="パート">&nbsp;&nbsp;&nbsp;パート</option>
+                    <option value="アルバイト">&nbsp;&nbsp;&nbsp;アルバイト</option>
+                    <option value="業務委託">&nbsp;&nbsp;&nbsp;業務委託</option>
+                    <option value="派遣">&nbsp;&nbsp;&nbsp;派遣</option>
+                    <option value="臨時社員">&nbsp;&nbsp;&nbsp;臨時社員</option>
+                    <option value="嘱託社員">&nbsp;&nbsp;&nbsp;嘱託社員</option>
+                    <option value="その他">&nbsp;&nbsp;&nbsp;その他</option>
+                </select>
+
+                </div>
+                </div>
+                
+                <button class="search-button" type="submit">
+                    <h3>この条件で検索</h3>
+                </button>
+            </div>
+            </form>
+        </div>
+
+
+
+        <!-- 応募後の流れ ----------------------->
+
+        <!-- <a href="after-flow.html">
+            <div class="after">
+                <button class="after-flow">
+                    <h3>応募後の流れ</h3>
+                </button>
+            </div>
+        </a> -->
+
+
+
+        <!--おすすめ求人ーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
+
+        <div class="title-bar">
+            <img src="src/img/オススメ求人.png" alt="おすすめ求人">
+        </div>
+
+        <div class="content-title">
+            <i class="fa-solid fa-star"></i> 
+            <h2 class="search-title">おすすめ求人</h2>
+        </div>
+    <div id="slideshow-wrapper">
+        
+        <div class="slide-inner">
+            
+            <div class="slideshow-container">
+            
+            <ul class="slider-track">
+                <li class="slide">
+                    <a href="./area-job/北海道/樺電工業.html">
+                        <img src="/src/detail-img/北海道/樺電工業　株式会社 : 電気技術者.jpeg" alt="求人1の画像">
+                        <div class="caption">樺電工業　株式会社 / 電気技術者<br><br></div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="./area-job/滋賀/杉本商事.html">
+                        <img src="src/detail-img/滋賀/株式会社　杉本商事 : 工場内スタッフ.jpeg" alt="求人2の画像">
+                        <div class="caption">株式会社　杉本商事 / 工場内スタッフ<br><br></div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="./area-job/京都/山本清掃.html">
+                        <img src="src/detail-img/京都/株式会社　山本清掃 : リサイクル工場内作業員.png" alt="求人3の画像">
+                        <div class="caption">株式会社　山本清掃 / リサイクル工場内作業員</div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/和歌山/おかむろ薬局.html">
+                        <img src="src/detail-img/和歌山/おかむろ薬局 : 一般事務.jpeg" alt="求人4の画像">
+                        <div class="caption">おかむろ薬局 / 一般事務<br><br></div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/広島/富士マネジメント.html">
+                        <img src="src/detail-img/広島/富士マネジメント株式会社 : 設備技術者（広島市）設計.jpeg" alt="求人5の画像">
+                        <div class="caption">富士マネジメント株式会社 / 設備技術者（広島市）設計</div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/山口/環境造形.html">
+                        <img src="/src/detail-img/山口/有限会社　環境造形 : 技術職.jpeg" alt="Image 6">
+                        <div class="caption">有限会社　環境造形 / 技術職<br><br></div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/徳島/かがやき歯科クリニック.html">
+                        <img src="src/detail-img/徳島/かがやき歯科クリニック : 受付・歯科助手.jpeg" alt="Image 6">
+                        <div class="caption">かがやき歯科クリニック / 受付・歯科助手<br><br></div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/香川/やすとみ歯科医院.html">
+                        <img src="/src/detail-img/香川/やすとみ歯科医院 : 歯科医院　受付補助.jpeg" alt="Image 6">
+                        <div class="caption">やすとみ歯科医院 / 歯科医院　受付補助<br><br></div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/愛媛/ねぶの花.html">
+                        <img src="src/detail-img/愛媛/株式会社　元禄　デイサービスねぶの花 : 介護職員.jpeg" alt="Image 6">
+                        <div class="caption">株式会社　元禄　デイサービスねぶの花 / 介護職員</div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/高知/仁智会.html">
+                        <img src="src/detail-img/高知/医療法人　仁智会（はまうづ医院・ヘルシーケアなはり） : 言語聴覚士【正社員】.jpeg" alt="Image 6">
+                        <div class="caption">医療法人　仁智会（はまうづ医院・ヘルシーケアなはり） / 言語聴覚士【正社員】</div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/福岡/はこざき漢方.html">
+                        <img src="src/detail-img/福岡/はこざき漢方内科・心身医療クリニック : 事務.jpeg" alt="Image 6">
+                        <div class="caption">はこざき漢方内科・心身医療クリニック / 事務</div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="./area-job/佐賀/いづみや.html">
+                        <img src="src/detail-img/佐賀/有限会社いづみや : 青果コーナー業務（パート）.jpeg" alt="Image 6">
+                        <div class="caption">有限会社いづみや / 青果コーナー業務（パート）</div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="./area-job/長崎/ＬＩＦＥ.html">
+                        <img src="src/detail-img/長崎/ＬＩＦＥ・ＤＥＳＩＧＮ株式会社 : 介護支援専門員.jpeg" alt="Image 6">
+                        <div class="caption">ＬＩＦＥ・ＤＥＳＩＧＮ株式会社 / 介護支援専門員</div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/熊本/三森会.html">
+                        <img src="src/detail-img/熊本/医療法人社団　三森会　三森循環器科・呼吸器科病院 : 介護支援専門員.jpeg" alt="Image 6">
+                        <div class="caption">医療法人社団　三森会　三森循環器科・呼吸器科病院 / 介護支援専門員</div>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a href="/area-job/沖縄/ホリデートラベル.html">
+                        <img src="src/detail-img/沖縄/株式会社　ジャパンホリデートラベル : 訪日旅行の企画手配、お客様対応.jpeg" alt="Image 6">
+                        <div class="caption">株式会社　ジャパンホリデートラベル / 訪日旅行の企画手配、お客様対応</div>
+                    </a>
+                </li>
+                <!-- 他のスライド要素を追加 -->
+            </ul>
+
+
+
+            <!-- 左矢印ボタン -->
+            <button class="slick-arrow slick-prev" aria-label="Previous" type="button">Previous</button>
+            <!-- 右矢印ボタン -->
+            <button class="slick-arrow slick-next" aria-label="Next" type="button">Next</button>
+            </div>
+
+        </div>
+        <!-- ドットのナビゲーションを表示するためのul要素 -->
+        <ul class="slick-dots"></ul>
+        </div>
+    </div>
+
+
+
+
+            <!--新着求人ーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
+
+            <div class="title-bar">
+                <img src="src/img/新着求人.png" alt="新着求人">
+            </div>
+
+            <div class="content-title">
+                <i class="fas fa-search"></i> 
+                <h2 class="search-title">新着求人</h2>
+            </div>
+
+    <div id="slideshow-wrapper-2">
+
+        <div class="slide-inner-2">
+            
+            <div class="slideshow-container-2">
+            
+            <ul class="slider-track-2">
+                <li class="slide-2">
+                    <a href="/area-job/北海道/Ｒ・ｓｔｙｌｅｓ.html">
+                        <img src="/src/detail-img/北海道/株式会社　Ｒ・ｓｔｙｌｅｓ : 介護員（正職員）.jpeg" alt="Image 1">
+                        <div class="caption-2">株式会社　Ｒ・ｓｔｙｌｅｓ / 介護員（正職員）<br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="/area-job/青森/大中.html">
+                        <img src="/src/detail-img/青森/大中　株式会社 : りんごの木箱運搬・品出し.jpeg" alt="Image 2">
+                        <div class="caption-2">大中　株式会社 / りんごの木箱運搬・品出し<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="/area-job/岩手/ざいもくちょう歯科.html">
+                        <img src="/src/detail-img/岩手/ざいもくちょう歯科: 歯科衛生士.jpeg" alt="Image 3">
+                        <div class="caption-2">ざいもくちょう歯科 / 歯科衛生士<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="/area-job/秋田/マルサ.html">
+                        <img src="/src/detail-img/秋田/株式会社　マルサ : 建具製造工.jpeg" alt="Image 4">
+                        <div class="caption-2">株式会社　マルサ / 建具製造工<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/山形/プロスパー.html">
+                        <img src="/src/detail-img/山形/プロスパー株式会社 : 配管工【正社員・経験者】プロスパー株式会社 : 配管工【正社員・経験者】.png" alt="Image 5">
+                        <div class="caption-2">プロスパー株式会社 / 配管工【正社員・経験者】<br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/福島/太陽の里いわき.html">
+                        <img src="/src/detail-img/福島/社会福祉法人昌平黌　太陽の里いわき : 介護福祉士.jpeg" alt="Image 6">
+                        <div class="caption-2">社会福祉法人昌平黌　太陽の里いわき / 介護福祉士<br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/栃木/Ｖａｒｉ.html">
+                        <img src="/src/detail-img/栃木/株式会社Ｖａｒｉ : 訪問介護スタッフ.jpeg" alt="Image 6">
+                        <div class="caption-2">株式会社Ｖａｒｉ / 訪問介護スタッフ<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/群馬/ケアサプライシステムズ.html">
+                        <img src="/src/detail-img/群馬/ケアサプライシステムズ　株式会社 : 地域介護職員.jpeg" alt="Image 6">
+                        <div class="caption-2">ケアサプライシステムズ　株式会社 / 地域介護職員</div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/埼玉/ＡＣＡ.html">
+                        <img src="/src/detail-img/埼玉/ＡＣＡ　Ｎｅｘｔ　株式会社 : 調理師.jpeg" alt="Image 6">
+                        <div class="caption-2">ＡＣＡ　Ｎｅｘｔ　株式会社 / 調理師<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/東京/小次郎.html">
+                        <img src="/src/detail-img/東京/株式会社小次郎 : 訪問介護員（ヘルパー）.webp" alt="Image 6">
+                        <div class="caption-2">株式会社小次郎 / 訪問介護員（ヘルパー）<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/神奈川/アリビオ.html">
+                        <img src="/src/detail-img/神奈川/株式会社　アリビオ : ケアワーカー.jpeg" alt="Image 6">
+                        <div class="caption-2">株式会社　アリビオ / ケアワーカー<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/新潟/丸世建設.html">
+                        <img src="/src/detail-img/新潟/丸世建設株式会社 : 土木技術者.jpeg" alt="Image 6">
+                        <div class="caption-2">丸世建設株式会社 / 土木技術者<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/富山/野沢工業.html">
+                        <img src="/src/detail-img/富山/野沢工業　株式会社 : 建設機械オペレーター.jpeg" alt="Image 6">
+                        <div class="caption-2">野沢工業　株式会社 / 建設機械オペレーター<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/福井/中野工業所.html">
+                        <img src="/src/detail-img/福井/有限会社　中野工業所 : 製造.jpeg" alt="Image 6">
+                        <div class="caption-2">有限会社　中野工業所 / 製造<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/山梨/ジャスト建設.html">
+                        <img src="/src/detail-img/山梨/株式会社　ジャスト建設 : 法面工・土工・鳶.jpeg" alt="Image 6">
+                        <div class="caption-2">株式会社　ジャスト建設 / 法面工・土工・鳶<br><br></div>
+                    </a>
+                </li>
+                <!-- 他のスライド要素を追加 -->
+            </ul>
+
+            
+            <!-- 左矢印ボタン -->
+            <button class="slick-arrow-2 slick-prev-2" aria-label="Previous-2" type="button"></button>
+            <!-- 右矢印ボタン -->
+            <button class="slick-arrow-2 slick-next-2" aria-label="Next-2" type="button"></button>
+            </div>
+
+        </div>
+        <!-- ドットのナビゲーションを表示するためのul要素 -->
+        <ul class="slick-dots-2"></ul>
+        </div>
+    </div>
+
+
+
+
+<!--人気のカテゴリーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
+
+<div class="title-bar">
+    <img src="src/img/職種別検索.png" alt="新着求人">
+</div>
+
+
+<div id="popular">
+    <div class="content-title">
+        <i class="fas fa-search"></i> 
+        <h2 class="search-title">人気のカテゴリー</h2>
+    </div>
+        
+        <div class="popular-container">
+            <div class="card-1">
+                <a href="/genre/full-time.html">
+                    <img src="src/img/photo-1-1.jpg" alt="カード1の画像">
+                    <h5>正社員</h5>
+                </a>
+            </div>
+            <div class="card-2">
+                <a href="/genre/part-job.html">
+                    <img src="src/img/photo-2-2.jpg" alt="カード2の画像">
+                    <h5>パート・アルバイト</h5>
+                </a>
+            </div>
+            <div class="card-3">
+                <a href="/genre/health.html">
+                    <img src="src/img/medical-photo-2.jpg" alt="カード3の画像">
+                    <h5>医療・介護・福祉</h5>
+                </a>
+            </div>
+            <div class="card-4">
+                <a href="/genre/construction.html">
+                    <img src="src/img/build-photo-2.jpg" alt="カード4の画像">
+                    <h5>ドライバー・建築</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="flow-main">
+    <div class="flow-detail">
+        <div class="flow-text">
+            <h3>掲載方法</h3>
+            <p>「お客様からのお問い合わせ又は閉局からの営業により、<br>広告掲載の案内を始めさせていただきます。」</p>
+        </div>
+
+        <div class="flow-about">
+            <h3>広告掲載までの流れについて</h3>
+            <div class="flow-about-text">
+                <h4>STEP1</h4>
+                <p>弊局より申込書をFAX又はメールにてお送り致します。</p>
+            </div>
+
+            <i class="fa-solid fa-angles-down"></i>
+
+            <div class="flow-about-text">
+                <h4>STEP2</h4>
+                <p>届いた申込書の記入欄に必要事項をご記入の上、<br>FAX又はメールにてご返信いただきます。</p>
+            </div>
+
+            <i class="fa-solid fa-angles-down"></i>
+
+            <div class="flow-about-text">
+                <h4>STEP3</h4>
+                <p>申込書をご返信いただきましたら、制作担当者が<br>ヒアリングを行い、原稿を制作させていただきます。</p>
+            </div>
+
+            <i class="fa-solid fa-angles-down"></i>
+
+            <div class="flow-about-text">
+                <h4>STEP4</h4>
+                <p>作成した原稿内容をFAX又はメールにてご案内いただき、
+                    <br>修正箇所がない場合は掲載開始させていただきます。
+                    <br>原稿の修正については協議の上で随時対応いたします。</p>
+            </div>
+
+            <h3>広告掲載料金について</h3>
+
+            <table>
+                <tr class="highlighted-row"> 
+                    <td>掲載期間</td>
+                    <td class="wider">掲載料金</td>
+                </tr>
+                <tr>
+                    <td>3ヶ月</td>
+                    <td class="wider">180,000円〜540,000円</td>
+                </tr>
+                <tr>
+                    <td>1年以上</td>
+                    <td class="wider">要相談</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div> -->
+
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-name">
+            <h3 class="footer-site">求人情報サイト</h3>
+            <h3 class="footer-company-neme">Micowork</h3>
+            <div class="policy"><a href="policy.html">プライバシーポリシー</a></div>
+            <div class="link"><a href="company.html">運営会社</a></div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- 一番上に戻るボタン -->
+<button class="scroll-to-top-button">
+<i class="fa-regular fa-chevron-down fa-rotate-180"></i>
+</button>
+    
+
+    <!-- ここでjQueryをCDNから読み込む -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- ここでSlickライブラリをCDNから読み込む -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- ここでRemodalライブラリをCDNから読み込む -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+
+<!-- ここでstyle.jsを読み込む -->
+<script src="src/js/style.js"></script>
+</body>
+</html>

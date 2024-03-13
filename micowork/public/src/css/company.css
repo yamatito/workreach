@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+/*ヘッダーーーーーーーーーーーーーーーー*/
+  
+.header {
+  background-color: #fff; /* ヘッダーの背景色を指定 */
+  max-width: 100%;
+}
+
+.header-name{
+  width: 20%;
+  text-align: center;
+}
+
+.inner{
+  width: 80%;
+  align-items: center;
+  padding: 15px 0px;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-site{
+  background-color: rgb(186,218,84);
+  border-radius: 16px;
+}
+
+.header-company-name{
+  font-size: 35px;
+}
+
+.new-jobs-button{
+padding: 10px 60px;
+font-size: 16px;
+  background-color: rgb(186,218,84);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/*都道府県ーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+
+.button-group {
+    background-color: rgb(186,218,84);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button {
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    margin-right: 3px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-button.no-arrow::after {
+    content: '';
+    display: none;
+}
+
+.nav-button::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: rotate(-45deg);
+    margin-left: 8px;
+    margin-bottom: 4px;
+    font-weight: normal;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-right: 0px;
+}
+
+.dropdown {
+  position: relative;
+  /* 追加: ドロップダウンの高さを調整 */
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  background-color: black;
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 130px;
+  text-align: center;
+  /* 追加: ドロップダウンの位置を調整 */
+  transform: translateY(0px);
+}
+
+.dropdown-menu li {
+    padding: 15px 0px;
+    font-size: 16px;
+    border-top: 2px dashed #999;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    
+}
+
+/* メニュー内のリスト項目をホバー時に白くする */
+.dropdown-menu li:hover {
+  background-color: rgb(116, 111, 111);
+  color: black; /* テキストカラーを黒に変更 */
+  border-top: 2px dashed white;
+}
+
+
+
+.dropdown-menu button{
+  color: white;
+}
+
+
+.top-photo img{
+    width: 100%;
+    height: 700px;
+}
+
+
+
+
+/*内容ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+#company-info{
+    padding-left: 100px;
+}
+
+.company-title{
+    font-size: 30px;
+    margin: 28px 0 28px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.company-detail h4{
+    font-size: 120%;
+    padding-bottom: 20px;
+}
+
+.company-detail p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    vertical-align: baseline;
+    line-height: 40px;
+    padding-bottom: 20px;
+}
+
+.company-detail br{
+    line-height: 2.4;
+}
+
+.company-detail ul{
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
+.company-detail li{
+    list-style: circle;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.mail{
+    padding: 30px 0px;
+}
+
+/*フッターーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+footer{
+  background-color: rgb(186,218,84);
+}
+
+.footer-inner{
+  padding: 30px 0px;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-name{
+  color: white;
+}
+
+.footer-site{
+  background-color: white;
+  color: rgb(186,218,84);
+  border-radius: 40px;
+}
+
+.footer-company-neme{
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.policy{
+  padding-top: 10px;
+}
+
+.link{
+  padding-top: 10px;
+}
+
+
+/*スクロールボタンーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+
+/* ボタンのスタイル */
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgb(186,218,84);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  
+  /* ボタンの中に不等号のような矢印のスタイル */
+  .scroll-to-top-button i {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 50px;
+    color: black;
+  }
+  
+  /* ボタンのホバー時のスタイル */
+  .scroll-to-top-button:hover {
+    background-color: rgb(186,218,84);
+  }
+  
+

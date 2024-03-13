@@ -17,12 +17,12 @@
     <header class="header">
         <div class="inner">
             <div class="header-name">
-                <a href="/index.html">
+                <a href="/">
                     <h3 class="header-site">求人情報サイト</h3>
                     <h3 class="header-company-name">Micowork</h3>
                 </a>
             </div>
-            <a href="/src/php/process.php" target="_blank" class="new-jobs-button">お問い合わせ</a>
+            <a href="" target="_blank" class="new-jobs-button">お問い合わせ</a>
         </div>
     </header>
 

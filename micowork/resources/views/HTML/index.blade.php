@@ -18,13 +18,10 @@
             </div>
             <div class="search-all">
                 <div class="search-container">
-
                     <div class="keyword-search">
                         <h3>キーワード</h3>
                         <input type="text" class="search-input" name="keyword" value="{{ request('keyword') }}" placeholder="キーワードで検索">
                     </div>
-
-
                     <div class="area-search">
                         <h3>エリアから選ぶ</h3>
                         <div class="">
@@ -71,26 +68,7 @@
         </form>
     </div>
 
-
-
-
-
-
     </form>
-
-
-
-
-    <!-- 応募後の流れ ----------------------->
-
-    <!-- <a href="after-flow.html">
-            <div class="after">
-                <button class="after-flow">
-                    <h3>応募後の流れ</h3>
-                </button>
-            </div>
-        </a> -->
-
 
 
     <!--おすすめ求人ーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
@@ -104,39 +82,37 @@
         <h2 class="search-title">おすすめ求人</h2>
     </div>
     <div id="slideshow-wrapper">
-
         <div class="slide-inner">
-
             <div class="slideshow-container">
 
                 <ul class="slider-track">
                     <li class="slide">
-                        <a href="./area-job/北海道/樺電工業.html">
+                        <a href="/area-job/北海道/樺電工業.html">
                             <img src="/src/detail-img/北海道/樺電工業　株式会社 : 電気技術者.jpeg" alt="求人1の画像">
                             <div class="caption">樺電工業　株式会社 / 電気技術者<br><br></div>
                         </a>
                     </li>
                     <li class="slide">
-                        <a href="./area-job/滋賀/杉本商事.html">
-                            <img src="src/detail-img/滋賀/株式会社　杉本商事 : 工場内スタッフ.jpeg" alt="求人2の画像">
+                        <a href="/area-job/滋賀/杉本商事.html">
+                            <img src="/src/detail-img/滋賀/株式会社　杉本商事 : 工場内スタッフ.jpeg" alt="求人2の画像">
                             <div class="caption">株式会社　杉本商事 / 工場内スタッフ<br><br></div>
                         </a>
                     </li>
                     <li class="slide">
-                        <a href="./area-job/京都/山本清掃.html">
-                            <img src="src/detail-img/京都/株式会社　山本清掃 : リサイクル工場内作業員.png" alt="求人3の画像">
+                        <a href="/area-job/京都/山本清掃.html">
+                            <img src="/src/detail-img/京都/株式会社　山本清掃 : リサイクル工場内作業員.png" alt="求人3の画像">
                             <div class="caption">株式会社　山本清掃 / リサイクル工場内作業員</div>
                         </a>
                     </li>
                     <li class="slide">
                         <a href="/area-job/和歌山/おかむろ薬局.html">
-                            <img src="src/detail-img/和歌山/おかむろ薬局 : 一般事務.jpeg" alt="求人4の画像">
+                            <img src="/src/detail-img/和歌山/おかむろ薬局 : 一般事務.jpeg" alt="求人4の画像">
                             <div class="caption">おかむろ薬局 / 一般事務<br><br></div>
                         </a>
                     </li>
                     <li class="slide">
                         <a href="/area-job/広島/富士マネジメント.html">
-                            <img src="src/detail-img/広島/富士マネジメント株式会社 : 設備技術者（広島市）設計.jpeg" alt="求人5の画像">
+                            <img src="/src/detail-img/広島/富士マネジメント株式会社 : 設備技術者（広島市）設計.jpeg" alt="求人5の画像">
                             <div class="caption">富士マネジメント株式会社 / 設備技術者（広島市）設計</div>
                         </a>
                     </li>
@@ -148,7 +124,7 @@
                     </li>
                     <li class="slide">
                         <a href="/area-job/徳島/かがやき歯科クリニック.html">
-                            <img src="src/detail-img/徳島/かがやき歯科クリニック : 受付・歯科助手.jpeg" alt="Image 6">
+                            <img src="/src/detail-img/徳島/かがやき歯科クリニック : 受付・歯科助手.jpeg" alt="Image 6">
                             <div class="caption">かがやき歯科クリニック / 受付・歯科助手<br><br></div>
                         </a>
                     </li>
@@ -160,43 +136,43 @@
                     </li>
                     <li class="slide">
                         <a href="/area-job/愛媛/ねぶの花.html">
-                            <img src="src/detail-img/愛媛/株式会社　元禄　デイサービスねぶの花 : 介護職員.jpeg" alt="Image 6">
+                            <img src="/src/detail-img/愛媛/株式会社　元禄　デイサービスねぶの花 : 介護職員.jpeg" alt="Image 6">
                             <div class="caption">株式会社　元禄　デイサービスねぶの花 / 介護職員</div>
                         </a>
                     </li>
                     <li class="slide">
                         <a href="/area-job/高知/仁智会.html">
-                            <img src="src/detail-img/高知/医療法人　仁智会（はまうづ医院・ヘルシーケアなはり） : 言語聴覚士【正社員】.jpeg" alt="Image 6">
+                            <img src="/src/detail-img/高知/医療法人　仁智会（はまうづ医院・ヘルシーケアなはり） : 言語聴覚士【正社員】.jpeg" alt="Image 6">
                             <div class="caption">医療法人　仁智会（はまうづ医院・ヘルシーケアなはり） / 言語聴覚士【正社員】</div>
                         </a>
                     </li>
                     <li class="slide">
                         <a href="/area-job/福岡/はこざき漢方.html">
-                            <img src="src/detail-img/福岡/はこざき漢方内科・心身医療クリニック : 事務.jpeg" alt="Image 6">
+                            <img src="/src/detail-img/福岡/はこざき漢方内科・心身医療クリニック : 事務.jpeg" alt="Image 6">
                             <div class="caption">はこざき漢方内科・心身医療クリニック / 事務</div>
                         </a>
                     </li>
                     <li class="slide">
-                        <a href="./area-job/佐賀/いづみや.html">
-                            <img src="src/detail-img/佐賀/有限会社いづみや : 青果コーナー業務（パート）.jpeg" alt="Image 6">
+                        <a href="/area-job/佐賀/いづみや.html">
+                            <img src="/src/detail-img/佐賀/有限会社いづみや : 青果コーナー業務（パート）.jpeg" alt="Image 6">
                             <div class="caption">有限会社いづみや / 青果コーナー業務（パート）</div>
                         </a>
                     </li>
                     <li class="slide">
-                        <a href="./area-job/長崎/ＬＩＦＥ.html">
-                            <img src="src/detail-img/長崎/ＬＩＦＥ・ＤＥＳＩＧＮ株式会社 : 介護支援専門員.jpeg" alt="Image 6">
+                        <a href="/area-job/長崎/ＬＩＦＥ.html">
+                            <img src="/src/detail-img/長崎/ＬＩＦＥ・ＤＥＳＩＧＮ株式会社 : 介護支援専門員.jpeg" alt="Image 6">
                             <div class="caption">ＬＩＦＥ・ＤＥＳＩＧＮ株式会社 / 介護支援専門員</div>
                         </a>
                     </li>
                     <li class="slide">
                         <a href="/area-job/熊本/三森会.html">
-                            <img src="src/detail-img/熊本/医療法人社団　三森会　三森循環器科・呼吸器科病院 : 介護支援専門員.jpeg" alt="Image 6">
+                            <img src="/src/detail-img/熊本/医療法人社団　三森会　三森循環器科・呼吸器科病院 : 介護支援専門員.jpeg" alt="Image 6">
                             <div class="caption">医療法人社団　三森会　三森循環器科・呼吸器科病院 / 介護支援専門員</div>
                         </a>
                     </li>
                     <li class="slide">
                         <a href="/area-job/沖縄/ホリデートラベル.html">
-                            <img src="src/detail-img/沖縄/株式会社　ジャパンホリデートラベル : 訪日旅行の企画手配、お客様対応.jpeg" alt="Image 6">
+                            <img src="/src/detail-img/沖縄/株式会社　ジャパンホリデートラベル : 訪日旅行の企画手配、お客様対応.jpeg" alt="Image 6">
                             <div class="caption">株式会社　ジャパンホリデートラベル / 訪日旅行の企画手配、お客様対応</div>
                         </a>
                     </li>
@@ -237,18 +213,96 @@
 
                 <ul class="slider-track-2">
 
-                    @foreach ($articles as $article)
-                    <li class="slide-2">
-                        <a href="{{ route('job.show', $article) }}">
-                            <img src="{{ asset('storage/images/articlesImg/' . $article->image_path) }}" alt="Image for {{ $article->company_name }}">
-                            <div class="caption-2">
-                                {{ $article->updated_at->format('Y-m-d H:i') }}<br>
-                                {{ $article->company_name }} / {{ $article->job_title }}<br>
-                            </div>
-                        </a>
-                    </li>
-                    @endforeach
-                    <!-- 他のスライド要素を追加 -->
+                <li class="slide-2">
+                    <a href="/area-job/北海道/Ｒ・ｓｔｙｌｅｓ.html">
+                        <img src="/src/detail-img/北海道/株式会社　Ｒ・ｓｔｙｌｅｓ : 介護員（正職員）.jpeg" alt="Image 1">
+                        <div class="caption-2">株式会社　Ｒ・ｓｔｙｌｅｓ / 介護員（正職員）<br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="/area-job/青森/大中.html">
+                        <img src="/src/detail-img/青森/大中　株式会社 : りんごの木箱運搬・品出し.jpeg" alt="Image 2">
+                        <div class="caption-2">大中　株式会社 / りんごの木箱運搬・品出し<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="/area-job/岩手/ざいもくちょう歯科.html">
+                        <img src="/src/detail-img/岩手/ざいもくちょう歯科: 歯科衛生士.jpeg" alt="Image 3">
+                        <div class="caption-2">ざいもくちょう歯科 / 歯科衛生士<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="/area-job/秋田/マルサ.html">
+                        <img src="/src/detail-img/秋田/株式会社　マルサ : 建具製造工.jpeg" alt="Image 4">
+                        <div class="caption-2">株式会社　マルサ / 建具製造工<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/山形/プロスパー.html">
+                        <img src="/src/detail-img/山形/プロスパー株式会社 : 配管工【正社員・経験者】プロスパー株式会社 : 配管工【正社員・経験者】.png" alt="Image 5">
+                        <div class="caption-2">プロスパー株式会社 / 配管工【正社員・経験者】<br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/福島/太陽の里いわき.html">
+                        <img src="/src/detail-img/福島/社会福祉法人昌平黌　太陽の里いわき : 介護福祉士.jpeg" alt="Image 6">
+                        <div class="caption-2">社会福祉法人昌平黌　太陽の里いわき / 介護福祉士<br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/栃木/Ｖａｒｉ.html">
+                        <img src="/src/detail-img/栃木/株式会社Ｖａｒｉ : 訪問介護スタッフ.jpeg" alt="Image 6">
+                        <div class="caption-2">株式会社Ｖａｒｉ / 訪問介護スタッフ<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/群馬/ケアサプライシステムズ.html">
+                        <img src="/src/detail-img/群馬/ケアサプライシステムズ　株式会社 : 地域介護職員.jpeg" alt="Image 6">
+                        <div class="caption-2">ケアサプライシステムズ　株式会社 / 地域介護職員</div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/埼玉/ＡＣＡ.html">
+                        <img src="/src/detail-img/埼玉/ＡＣＡ　Ｎｅｘｔ　株式会社 : 調理師.jpeg" alt="Image 6">
+                        <div class="caption-2">ＡＣＡ　Ｎｅｘｔ　株式会社 / 調理師<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/東京/小次郎.html">
+                        <img src="/src/detail-img/東京/株式会社小次郎 : 訪問介護員（ヘルパー）.webp" alt="Image 6">
+                        <div class="caption-2">株式会社小次郎 / 訪問介護員（ヘルパー）<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/神奈川/アリビオ.html">
+                        <img src="/src/detail-img/神奈川/株式会社　アリビオ : ケアワーカー.jpeg" alt="Image 6">
+                        <div class="caption-2">株式会社　アリビオ / ケアワーカー<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/新潟/丸世建設.html">
+                        <img src="/src/detail-img/新潟/丸世建設株式会社 : 土木技術者.jpeg" alt="Image 6">
+                        <div class="caption-2">丸世建設株式会社 / 土木技術者<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/富山/野沢工業.html">
+                        <img src="/src/detail-img/富山/野沢工業　株式会社 : 建設機械オペレーター.jpeg" alt="Image 6">
+                        <div class="caption-2">野沢工業　株式会社 / 建設機械オペレーター<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/福井/中野工業所.html">
+                        <img src="/src/detail-img/福井/有限会社　中野工業所 : 製造.jpeg" alt="Image 6">
+                        <div class="caption-2">有限会社　中野工業所 / 製造<br><br></div>
+                    </a>
+                </li>
+                <li class="slide-2">
+                    <a href="./area-job/山梨/ジャスト建設.html">
+                        <img src="/src/detail-img/山梨/株式会社　ジャスト建設 : 法面工・土工・鳶.jpeg" alt="Image 6">
+                        <div class="caption-2">株式会社　ジャスト建設 / 法面工・土工・鳶<br><br></div>
+                    </a>
+                </li>
                 </ul>
 
 
