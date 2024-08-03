@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mico work</title>
+    <title>WorkReach</title>
     <meta name="description" content="あなたの理想の企業を見つけ出すMico work。幅広い業界と職種から、あなたにピッタリの会社が見つかります。">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -25,7 +25,7 @@
             </a>
         </div>
     </div>
-    <form id="category-form" action="{{ route('job.search') }}" method="GET" class="mt-4">
+    <form id="category-form" action="{{ route('job.search') }}" method="GET" class="mt-4 hidden sm:block">
         <div class="button-group d-flex flex-wrap justify-content-center">
             <div class="me-2">
                 <button class="nav-button  btn btn-secondary " name="area" value="">全国</button>

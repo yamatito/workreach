@@ -73,45 +73,45 @@ class ArticleController extends Controller
 }
 
 
+public function search(Request $request)
+{
+    $query = Article::query();
 
-    public function search(Request $request)
-    {
-        $query = Article::query();
-
-        if ($request->filled('area')) {
-            $area = str_replace('県', '', $request->area);
-            $searchAreas = [$request->area, $area . '県', $area . '都', $area . '府', $area . '道'];
-            $query->where(function ($q) use ($searchAreas) {
-                foreach ($searchAreas as $area) {
-                    $q->orWhere('area', 'like', '%' . $area . '%');
-                }
-            });
-        }
-
-        if ($request->filled('job_title')) {
-            $query->where('job_title', 'like', '%' . $request->job_title . '%');
-        }
-
-        if ($request->filled('employment_type')) {
-            $query->where('employment_type', $request->employment_type);
-        }
-
-        if ($request->filled('keyword')) {
-            $query->where(function ($q) use ($request) {
-                $q->where('company_name', 'like', '%' . $request->keyword . '%')
-                    ->orWhere('job_description', 'like', '%' . $request->keyword . '%')
-                    ->orWhere('address', 'like', '%' . $request->keyword . '%');
-            });
-        }
-
-        $articles = $query->where('status', true)->orderBy('created_at', 'desc')->simplePaginate(10);
-
-        $data = [
-            'articles' => $articles,
-        ];
-
-        return view('job.search', $data);
+    if ($request->filled('area') && $request->area !== '全国') {
+        $area = str_replace('県', '', $request->area);
+        $searchAreas = [$request->area, $area . '県', $area . '都', $area . '府', $area . '道'];
+        $query->where(function ($q) use ($searchAreas) {
+            foreach ($searchAreas as $area) {
+                $q->orWhere('area', 'like', '%' . $area . '%');
+            }
+        });
     }
+
+    if ($request->filled('job_title') && $request->job_title !== '全業種') {
+        $query->where('job_title', 'like', '%' . $request->job_title . '%');
+    }
+
+    if ($request->filled('employment_type') && $request->employment_type !== '全雇用形態') {
+        $query->where('employment_type', $request->employment_type);
+    }
+
+    if ($request->filled('keyword')) {
+        $query->where(function ($q) use ($request) {
+            $q->where('company_name', 'like', '%' . $request->keyword . '%')
+                ->orWhere('job_description', 'like', '%' . $request->keyword . '%')
+                ->orWhere('address', 'like', '%' . $request->keyword . '%');
+        });
+    }
+
+    // ランダムな順序で記事を取得
+    $articles = $query->where('status', true)->inRandomOrder()->simplePaginate(10);
+
+    $data = [
+        'articles' => $articles,
+    ];
+
+    return view('job.search', $data);
+}
     
 
 

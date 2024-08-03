@@ -5,7 +5,7 @@
 <div class="relative mb-8 max-w-6xl mx-auto bg-[#F7FAFF]">
             <img src="{{ asset('/images/top.jpeg') }}" alt="画像1" class="w-full">
             <div class="w-full absolute inset-0 flex items-top justify-end">
-                <h2 class="text-blue-800 text-6xl font-bold p-4 rounded-lg left-0 top-5 relative">
+                <h2 class="text-blue-800 text-xl md:text-6xl font-bold p-4 rounded-lg left-0 -top-5 sm:top-5 relative">
                     あなたの求める
                     <br>
                     企業が見つかる
@@ -14,7 +14,7 @@
         </div>
 
 <div class="bg-[#F7FAFF] py-8">
-    <div class="max-w-6xl mx-auto px-10">
+    <div class="max-w-6xl mx-auto px-2 sm:px-10">
        
 
 
@@ -35,7 +35,7 @@
                         <label for="area" class="block text-gray-700 font-semibold">エリアから選ぶ</label>
                         <select name="area" id="area" class="w-full border-gray-300 rounded-lg shadow-sm">
                             <option value="">都道府県エリア</option>
-                            @foreach(['北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県', '茨城県', '栃木県', '群馬県', '埼玉県', '千葉県', '東京都', '神奈川県', '新潟県', '富山県', '石川県', '福井県', '山梨県', '長野県', '岐阜県', '静岡県', '愛知県', '三重県', '滋賀県', '京都府', '大阪府', '兵庫県', '奈良県', '和歌山県', '鳥取県', '島根県', '岡山県', '広島県', '山口県', '徳島県', '香川県', '愛媛県', '高知県', '福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '鹿児島県', '沖縄県'] as $prefecture)
+                            @foreach(['全国','北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県', '茨城県', '栃木県', '群馬県', '埼玉県', '千葉県', '東京都', '神奈川県', '新潟県', '富山県', '石川県', '福井県', '山梨県', '長野県', '岐阜県', '静岡県', '愛知県', '三重県', '滋賀県', '京都府', '大阪府', '兵庫県', '奈良県', '和歌山県', '鳥取県', '島根県', '岡山県', '広島県', '山口県', '徳島県', '香川県', '愛媛県', '高知県', '福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '鹿児島県', '沖縄県'] as $prefecture)
                             <option value="{{ $prefecture }}" {{ request('area') == $prefecture ? 'selected' : '' }}>{{ $prefecture }}</option>
                             @endforeach
                         </select>
@@ -132,7 +132,7 @@
                 </a>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <a href="http://127.0.0.1:8000/search?keyword=&area=&job_title=%E5%8C%BB%E7%99%82%E3%83%BB%E4%BB%8B%E8%AD%B7%E3%83%BB%E7%A6%8F%E7%A5%89&employment_type=">
+                <a href="https://workreach.works/search?keyword=&area=&job_title=%E5%8C%BB%E7%99%82%E3%83%BB%E4%BB%8B%E8%AD%B7%E3%83%BB%E7%A6%8F%E7%A5%89&employment_type=">
                     <img src="{{ asset('images/medical-photo-2.jpg') }}" alt="カード3の画像" class="w-full h-48 object-cover">
                     <div class="p-4 text-center">
                         <h5 class="text-lg font-semibold">医療・介護・福祉</h5>
@@ -140,7 +140,7 @@
                 </a>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <a href="http://127.0.0.1:8000/search?keyword=&area=&job_title=%E5%BB%BA%E7%AF%89%E3%83%BB%E5%9C%9F%E6%9C%A8&employment_type=">
+                <a href="https://workreach.works/search?keyword=&area=&job_title=%E5%BB%BA%E7%AF%89%E3%83%BB%E5%9C%9F%E6%9C%A8&employment_type=">
                     <img src="{{ asset('images/build-photo-2.jpg') }}" alt="カード4の画像" class="w-full h-48 object-cover">
                     <div class="p-4 text-center">
                         <h5 class="text-lg font-semibold">建築・土木</h5>

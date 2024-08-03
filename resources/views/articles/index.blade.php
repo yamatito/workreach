@@ -18,7 +18,7 @@
 <div class="mt-16 space-y-10 lg:mt-10">
     @foreach ($articles as $article)
     <a href="{{ route('articles.adminshow', $article) }}" class="block transform transition-transform hover:scale-105">
-        <article class="relative isolate flex flex-col lg:flex-row bg-gray-300 p-4 rounded-xl shadow-md">
+        <article class="relative isolate flex flex-col lg:flex-row bg-[#F7FAFF] p-4 rounded-xl shadow-md">
             <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-48 lg:shrink-0">
                 <img src="{{ asset('images/articlesImg/' . $article->image_path) }}" alt="{{ $article->image_path }}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
                 <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
