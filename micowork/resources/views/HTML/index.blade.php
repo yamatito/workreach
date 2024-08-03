@@ -12,10 +12,6 @@
     <div class="search-bar">
         <form action="{{ route('job.search') }}" method="GET">
 
-            <div class="content-title">
-                <i class="fas fa-search"></i>
-                <h2 class="search-title">求人検索</h2>
-            </div>
             <div class="search-all">
                 <div class="search-container">
                     <div class="keyword-search">
@@ -75,11 +71,6 @@
 
     <div class="title-bar">
         <img src="{{ asset('storage/images/oldImg/img/オススメ求人.png ') }}" alt="おすすめ求人">
-    </div>
-
-    <div class="content-title">
-        <i class="fa-solid fa-star"></i>
-        <h2 class="search-title">おすすめ求人</h2>
     </div>
     <div id="slideshow-wrapper">
         <div class="slide-inner">
@@ -200,11 +191,6 @@
 
     <div class="title-bar">
         <img src="{{ asset('storage/images/oldImg/img/新着求人.png') }}" alt="新着求人">
-    </div>
-
-    <div class="content-title">
-        <i class="fas fa-search"></i>
-        <h2 class="search-title">新着求人</h2>
     </div>
 
     <div id="slideshow-wrapper-2">
@@ -329,10 +315,6 @@
 
 
     <div id="popular">
-        <div class="content-title">
-            <i class="fas fa-search"></i>
-            <h2 class="search-title">人気のカテゴリー</h2>
-        </div>
 
         <div class="popular-container">
             <div class="card-1">

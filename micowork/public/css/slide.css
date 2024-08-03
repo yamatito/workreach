@@ -1,6 +1,6 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -13,42 +13,43 @@ body {
 
 
 .header {
-    background-color: #fff; /* ヘッダーの背景色を指定 */
-    max-width: 100%;
+  background-color: #fff;
+  /* ヘッダーの背景色を指定 */
+  max-width: 100%;
 }
 
-.header-name{
-    width: 20%;
-    text-align: center;
+.header-name {
+  width: 20%;
+  text-align: center;
 }
 
-.inner{
-    width: 80%;
-    align-items: center;
-    padding: 15px 0px;
-    margin-left: 10%;
-    display: flex;
-    justify-content: space-between;
+.inner {
+  width: 80%;
+  align-items: center;
+  padding: 15px 0px;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.header-site{
-    background-color: rgb(186,218,84);
-    border-radius: 16px;
+.header-site {
+  background-color: rgb(186, 218, 84);
+  border-radius: 16px;
 }
 
-.header-company-name{
-    font-size: 35px;
+.header-company-name {
+  font-size: 35px;
 }
 
-.new-jobs-button{
+.new-jobs-button {
   padding: 10px 60px;
   font-size: 16px;
-    background-color: rgb(186,218,84);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s, color 0.3s;
+  background-color: rgb(186, 218, 84);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 
@@ -57,7 +58,7 @@ body {
 
 
 .button-group {
-  background-color: rgb(186,218,84);
+  background-color: rgb(186, 218, 84);
   display: flex;
   width: 100%;
   justify-content: center;
@@ -109,24 +110,24 @@ body {
 }
 
 .dropdown {
-position: relative;
-/* 追加: ドロップダウンの高さを調整 */
-display: inline-block;
+  position: relative;
+  /* 追加: ドロップダウンの高さを調整 */
+  display: inline-block;
 }
 
 .dropdown-menu {
-display: none;
-position: absolute;
-top: 100%;
-left: 0;
-z-index: 2;
-background-color: rgb(186,218,84);
-padding: 0px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-width: 130px;
-text-align: center;
-/* 追加: ドロップダウンの位置を調整 */
-transform: translateY(0px);
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  background-color: rgb(186, 218, 84);
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 130px;
+  text-align: center;
+  /* 追加: ドロップダウンの位置を調整 */
+  transform: translateY(0px);
 }
 
 .dropdown-menu li {
@@ -140,26 +141,27 @@ transform: translateY(0px);
   text-decoration: none;
 }
 
-.dropdown:hover > .dropdown-menu {
+.dropdown:hover>.dropdown-menu {
   display: block;
-  
+
 }
 
 /* メニュー内のリスト項目をホバー時に白くする */
 .dropdown-menu li:hover {
-background-color: white;
-color: black; /* テキストカラーを黒に変更 */
-border-top: 2px dashed white;
+  background-color: white;
+  color: black;
+  /* テキストカラーを黒に変更 */
+  border-top: 2px dashed white;
 }
 
 
 
-.dropdown-menu button{
-color: black;
+.dropdown-menu button {
+  color: black;
 }
 
 
-.top-photo img{
+.top-photo img {
   width: 100%;
   height: 700px;
 }
@@ -172,112 +174,113 @@ color: black;
 /*内容ーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 #job-listing {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 50px;
-  }
-
-  #job-listing p{
-    font-size: 14px;
-  }
-
-  .job-info{
-    width: 70%;
-  }
-  
-  .job-detail {
-    align-items: center;
-    margin: 0;
-    padding: 30px 39px 25px;
-    background: #f7f7f7;
-    border: 1px solid #ddd;
-    
-  }
-  
-  .genre-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-  }
-  
-  .genre-list li {
-    display: inline-block;
-    cursor: pointer;
-    margin: 0 6px 0 0;
-    padding: 5px 10px;
-    font-size: 12px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
 }
-  
 
-  .genre-list .genre-1{
-    background-color: rgb(153,153,153);
-    border-radius: 40px;
-  }
+#job-listing p {
+  font-size: 14px;
+}
 
-  .genre-list .genre-2{
-    background-color: rgb(0,0,0);
-    border-radius: 40px;
-  }
+.job-info {
+  width: 70%;
+}
 
-  .genre-list .genre-3{
-    background-color: rgb(186,218,84);
-    border-radius: 40px;
-  }
-  
-  .job-title {
-    margin-top: 20px;
-    font-size: 30px;
-  }
-  
-  .job-image {
-    width: 100%;
-    height: 491px;
-  }
+.job-detail {
+  align-items: center;
+  margin: 0;
+  padding: 30px 39px 25px;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
 
-  .job-image img{
-    width: 749px;
-    height: auto;
-    display: block;
-    margin: 0;
-  }
-  
-  .job-description {
-    line-height: 2.4;
-    margin: 0 0 2.4em 0;
-  }
-  
-  .job-details {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .job-details th, .job-details td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-  }
-  
+}
+
+.genre-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.genre-list li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 6px 0 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
 
 
+.genre-list .genre-1 {
+  background-color: rgb(153, 153, 153);
+  border-radius: 40px;
+}
 
-  .call{
-    margin-top: 20px;
-    padding: 30px 0px;
-  }
+.genre-list .genre-2 {
+  background-color: rgb(0, 0, 0);
+  border-radius: 40px;
+}
 
-  .call a:hover {
-    text-decoration: underline;
-  }
+.genre-list .genre-3 {
+  background-color: rgb(186, 218, 84);
+  border-radius: 40px;
+}
 
-  .email{
-    padding: 30px 0px;
-  }
+.job-title {
+  margin-top: 20px;
+  font-size: 30px;
+}
 
-  .email a:hover {
-    text-decoration: underline;
-  }
+.job-image {
+  width: 100%;
+  height: 491px;
+}
+
+.job-image img {
+  width: 749px;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.job-description {
+  line-height: 2.4;
+  margin: 0 0 2.4em 0;
+}
+
+.job-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.job-details th,
+.job-details td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+
+
+
+.call {
+  margin-top: 20px;
+  padding: 30px 0px;
+}
+
+.call a:hover {
+  text-decoration: underline;
+}
+
+.email {
+  padding: 30px 0px;
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -287,70 +290,295 @@ color: black;
 
 
 /*フッターーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-footer{
-    background-color: rgb(186,218,84);
-    margin-top: 30px;
+footer {
+  background-color: rgb(186, 218, 84);
+  margin-top: 30px;
+}
+
+.footer-inner {
+  padding: 30px 0px;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-name {
+  color: white;
+}
+
+.footer-site {
+  background-color: white;
+  color: rgb(186, 218, 84);
+  border-radius: 40px;
+}
+
+.footer-company-neme {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.policy {
+  padding-top: 10px;
+}
+
+.link {
+  padding-top: 10px;
+}
+
+/*スクロールボタンーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+
+/* ボタンのスタイル */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgb(186, 218, 84);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+/* ボタンの中に不等号のような矢印のスタイル */
+.scroll-to-top-button i {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 50px;
+  color: black;
+}
+
+/* ボタンのホバー時のスタイル */
+.scroll-to-top-button:hover {
+  background-color: rgb(186, 218, 84);
+}
+
+
+/* タブレット */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+ 
+  .inner,
+  .search-container,
+  .search-select,
+  .popular-container,
+  .slide,
+  .slide-2 {
+    width: 100%;
   }
-  
-  .footer-inner{
-    padding: 30px 0px;
-    width: 20%;
+
+  .search-input {
+    width: 90%;
+  }
+
+  .new-jobs-button,
+  .search-button,
+  .after button {
+    width: auto;
+    padding: 10px 30px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .keyword-search,
+  .area-search,
+  .search-button {
+    flex-basis: 100%;
+  }
+
+  .popular-container {
+    flex-direction: column;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    flex-basis: 100%;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+
+  .slide-inner {
+    width: 100%;
+  }
+
+  .slide-inner-2 {
+    width: 100%;
+  }
+
+  .nav-button {
+    font-size: 10px !important;
+    padding: 8px 4px !important;
+  }
+
+  .button-group {
+    justify-content: space-around !important;
+  }
+
+  .title-bar img {
+    height: auto;
+  }
+
+  .inner {
+    margin: 0;
+  }
+
+  .job-info {
+    width: 100%;
+  }
+
+  td{
+    font-size: 30px;
+  }
+
+}
+
+
+/* スマホ */
+@media (max-width: 768px) {
+
+ 
+
+  .header-name,
+  .inner,
+  .nav-button,
+  .search-container,
+  .popular-container,
+  .slide,
+  .slide-2 {
+    width: 100%;
+    padding: 0;
     margin: 0 auto;
-    text-align: center;
   }
 
-  .footer-name{
-    color: white;
+  .new-jobs-button,
+  .search-button,
+  .after button {
+    width: auto;
+    padding: 10px 20px;
   }
 
-  .footer-site{
-    background-color: white;
-    color: rgb(186,218,84);
-    border-radius: 40px;
+  .dropdown-menu {
+    width: 100%;
   }
 
-  .footer-company-neme{
-    font-weight: 900;
-    font-size: 40px;
+  .nav-list li,
+  .button-group {
+    flex-direction: column;
   }
 
-  .policy{
-    padding-top: 10px;
+  .search-container {
+    flex-direction: column;
+    margin-left: 0;
   }
 
-  .link{
-    padding-top: 10px;
+  .keyword-search,
+  .area-search,
+  .search-button {
+    flex-basis: 100%;
   }
 
-  /*スクロールボタンーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-  
-  
-  /* ボタンのスタイル */
-  .scroll-to-top-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: rgb(186,218,84);
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
+  .popular-container {
+    flex-direction: column;
   }
-  
-  /* ボタンの中に不等号のような矢印のスタイル */
-  .scroll-to-top-button i {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 50px;
-    color: black;
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    flex-basis: 100%;
   }
-  
-  /* ボタンのホバー時のスタイル */
-  .scroll-to-top-button:hover {
-    background-color: rgb(186,218,84);
+
+  .slide-inner {
+    width: 100%;
   }
-  
+
+  .slide-inner-2 {
+    width: 100%;
+  }
 
 
 
+  .nav-button {
+    width: auto;
+  }
+
+  .nav-list {
+    display: contents !important;
+  }
+
+  .header-name {
+    width: 80% !important;
+  }
+
+  #category-form {
+    display: none;
+  }
+
+  #search-button {
+    display: block;
+    padding: 5px;
+    margin-right: 8px;
+    margin-left: auto;
+    margin-bottom: 7px;
+    font-weight: 700;
+    background-color: rgb(186, 218, 84);
+    border-radius: 50px;
+  }
+
+  .title-bar {
+    padding: 0;
+  }
+
+  .title-bar img {
+    height: auto;
+  }
+
+  .search-input {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .search-select {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .search-all h3 {
+    padding: 0;
+  }
+
+  .search-button {
+    margin: 0;
+  }
+
+  .footer-inner {
+    width: 90% !important;
+  }
+
+
+  .job-info {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  td{
+    font-size: 15px;
+  }
+
+  /* .button-group {
+    flex-direction: revert;
+    } */
+}

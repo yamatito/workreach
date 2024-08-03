@@ -67,6 +67,12 @@ $('.slick-prev').click(function() {
   $('.slick-next').click(function() {
     $('.slider-track').slick('slickNext');
   });
+
+    // '都道府県検索'ボタンのクリックイベントを設定
+    $('#search-button').click(function() {
+      // 'button-group'の表示/非表示を切り替える
+      $('#category-form').toggle();
+  });
 });
   
 
@@ -191,73 +197,6 @@ $(document).ready(function () {
 
 
 
-
-
-//検索機能------result専用ーーーーーーーーーーーーーーーーーーーーーーーーーー//
-var jobContainer = document.getElementById("jobContainer");
-
-// 求人情報を動的に生成してコンテナに追加
-jobs.forEach(function (job) {
-    var jobElement = document.createElement("div");
-    jobElement.classList.add("feature");
-    jobElement.innerHTML = `
-        <a href="${link}">
-            <img src="${image}" alt="特徴画像" class="feature-image">
-            <div class="feature-content">
-                <ul class="genre-list">
-                    <li class="genre-1">${genre1}</li>
-                    <li class="genre-2">${genre2}</li>
-                    <li class="genre-2">${genre3}</li>
-                </ul>
-                <h3>${title}</h3>
-                <p>${description}</p>
-            </div>
-        </a>
-    `;
-    jobContainer.appendChild(jobElement);
-});
-
-
-
-
-
-
-
-
-
-// 各求人情報を繰り返し処理してコンテナを生成
-jobsData.forEach(job => {
-  const jobContainer = document.createElement('div');
-  jobContainer.className = 'job-item';
-
-  const image = document.createElement('img');
-  image.src = job.imagePath;
-  image.alt = '求人画像';
-
-  const title = document.createElement('h2');
-  title.textContent = job.title;
-
-  const genre = document.createElement('span');
-  genre.textContent = job.genre;
-
-  const description = document.createElement('p');
-  description.textContent = job.description;
-
-  jobContainer.appendChild(image);
-  jobContainer.appendChild(title);
-  jobContainer.appendChild(genre);
-  jobContainer.appendChild(description);
-
-  resultsContainer.appendChild(jobContainer);
-});
-
-
-
-
-jobsData.forEach(job => {
-    const jobElement = createJobItem(job.imagePath, job.genre, job.description);
-    resultsContainer.appendChild(jobElement);
-});
 
 
 

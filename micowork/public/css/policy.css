@@ -170,3 +170,19 @@ footer{
     background-color: rgb(186,218,84);
   }
   
+/* スマホ */
+@media (max-width: 768px) {
+
+  .inner {
+width: 100% !important;
+margin: 0;
+  }
+
+  .header-name {
+    width: 90%;
+margin: 0 auto;
+  }
+  .footer-inner {
+    width: 100%;
+  }
+}

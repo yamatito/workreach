@@ -275,5 +275,13 @@ footer{
   .scroll-to-top-button:hover {
     background-color: rgb(186,218,84);
   }
+
+
+  /* タブレット */
+  @media (min-width: 769px) and (max-width: 1024px) {
+main{
+  height: 1vh;
+}
+  }
   
 

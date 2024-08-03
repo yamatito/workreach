@@ -1,6 +1,6 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -10,42 +10,43 @@ body {
 /*ヘッダーーーーーーーーーーーーーーーー*/
 
 .header {
-    background-color: #fff; /* ヘッダーの背景色を指定 */
-    max-width: 100%;
+  background-color: #fff;
+  /* ヘッダーの背景色を指定 */
+  max-width: 100%;
 }
 
-.header-name{
-    width: 20%;
-    text-align: center;
+.header-name {
+  width: 20%;
+  text-align: center;
 }
 
-.inner{
-    width: 80%;
-    align-items: center;
-    padding: 15px 0px;
-    margin-left: 10%;
-    display: flex;
-    justify-content: space-between;
+.inner {
+  width: 80%;
+  align-items: center;
+  padding: 15px 0px;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.header-site{
-    background-color: rgb(186,218,84);
-    border-radius: 16px;
+.header-site {
+  background-color: rgb(186, 218, 84);
+  border-radius: 16px;
 }
 
-.header-company-name{
-    font-size: 35px;
+.header-company-name {
+  font-size: 35px;
 }
 
-.new-jobs-button{
+.new-jobs-button {
   padding: 10px 60px;
   font-size: 16px;
-    background-color: rgb(186,218,84);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s, color 0.3s;
+  background-color: rgb(186, 218, 84);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 
@@ -54,55 +55,55 @@ body {
 
 
 .button-group {
-    background-color: rgb(186,218,84);
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgb(186, 218, 84);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav-button {
-    padding: 15px 40px;
-    border: none;
-    cursor: pointer;
-    margin-right: 3px;
-    background-color: transparent;
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  margin-right: 3px;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
 }
 
 .nav-button.no-arrow::after {
-    content: '';
-    display: none;
+  content: '';
+  display: none;
 }
 
 .nav-button::after {
-    content: '';
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
-    transform: rotate(-45deg);
-    margin-left: 8px;
-    margin-bottom: 4px;
-    font-weight: normal;
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: rotate(-45deg);
+  margin-left: 8px;
+  margin-bottom: 4px;
+  font-weight: normal;
 }
 
 .nav-button:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .nav-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
 }
 
 .nav-list li {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 .dropdown {
@@ -117,7 +118,7 @@ body {
   top: 100%;
   left: 0;
   z-index: 2;
-  background-color: rgb(186,218,84);
+  background-color: rgb(186, 218, 84);
   padding: 0px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   width: 130px;
@@ -127,40 +128,41 @@ body {
 }
 
 .dropdown-menu li {
-    padding: 15px 0px;
-    font-size: 16px;
-    border-top: 2px dashed #999;
+  padding: 15px 0px;
+  font-size: 16px;
+  border-top: 2px dashed #999;
 }
 
 .dropdown-menu a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 
-.dropdown:hover > .dropdown-menu {
-    display: block;
-    
+.dropdown:hover>.dropdown-menu {
+  display: block;
+
 }
 
 /* メニュー内のリスト項目をホバー時に白くする */
 .dropdown-menu li:hover {
   background-color: white;
-  color: black; /* テキストカラーを黒に変更 */
+  color: black;
+  /* テキストカラーを黒に変更 */
   border-top: 2px dashed white;
 }
 
 
 
-.dropdown-menu button{
+.dropdown-menu button {
   color: black;
 }
 
 
 
-.top-photo img{
-    width: 100%;
-    height: 700px;
+.top-photo img {
+  width: 100%;
+  height: auto !important;
 }
 
 
@@ -168,13 +170,13 @@ body {
 
 
 /*タイトルバーーーーーーーーーーーーーーーー*/
-.title-bar{
+.title-bar {
   padding-top: 70px;
 }
 
-.title-bar img{
-  padding-left: 200px;
-  width: 1000px;
+.title-bar img {
+  margin: 0 auto;
+  width: 90%;
   height: 100px;
 }
 
@@ -185,114 +187,119 @@ body {
 
 
 .search-bar {
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0px 0px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0px 0px;
 }
 
-.content-title{
+.content-title {
   text-align: center;
 }
 
-.content-title img{
+.content-title img {
   width: 1000px;
   height: 100px;
 }
 
-.search-title{
-    width: 60%;
-    font-size: 25px;
-    text-align: left;
-    color: #fff;
-    font-weight: 200;
+.search-title {
+  width: 60%;
+  font-size: 25px;
+  text-align: left;
+  color: #fff;
+  font-weight: 200;
 
 }
 
 
 
-.content-title i{
-    font-size: 25px;
-    color: white;
-    padding-top: 8px;
-    padding-right: 5px;
+.content-title i {
+  font-size: 25px;
+  color: white;
+  padding-top: 8px;
+  padding-right: 5px;
 }
 
 
 
-.search-all{
-}
+.search-all {}
 
-.search-container{
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 150px;
-    margin-top: 0px;
+.search-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 150px;
+  margin-top: 0px;
 }
 
 .keyword-search,
 .area-search,
 .search-button {
-    flex-basis: 50%; /* 幅を50%に設定し、2列に配置 */
-    padding: 10px; /* 要素の間に余白を追加 */
-    box-sizing: border-box; /* パディングを要素の幅に含める */
+  flex-basis: 50%;
+  /* 幅を50%に設定し、2列に配置 */
+  padding: 10px;
+  /* 要素の間に余白を追加 */
+  box-sizing: border-box;
+  /* パディングを要素の幅に含める */
 }
 
 
 .search-input {
-    padding: 20px 30px;
-    width: 400px;
-    font-size: 14px;
-    border: none;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+  padding: 20px 30px;
+  width: 400px;
+  font-size: 14px;
+  border: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
 
 .search-select {
-    padding: 20px 30px;
-    font-size: 14px;
-    width: 470px;
-    background-color: transparent;
-    border: none;
-    background-color: white;
-    border-radius: 5px;
-    -webkit-appearance: none; /* Safari用のプレフィックス */
-    border: 2px solid #ccc;
+  padding: 20px 30px;
+  font-size: 14px;
+  width: 470px;
+  background-color: transparent;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  /* Safari用のプレフィックス */
+  border: 2px solid #ccc;
 }
 
-.search-all h3{
-    text-align: left;
-    padding-left: 50px;
-    font-size: 20px;
+.search-all h3 {
+  text-align: left;
+  padding-left: 50px;
+  font-size: 20px;
 }
 
 /* ボタンのスタイル */
 .search-button {
-    padding: 13px 13px;
-    background-color: rgb(186,218,84); 
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px; /* 角を丸くする */
-    margin: 0 auto;
-    margin-top: 60px;
-    margin-left: 30px;
-    width: 20%; 
+  padding: 13px 13px;
+  background-color: rgb(186, 218, 84);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  /* 角を丸くする */
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-left: 30px;
+  width: 20%;
 }
 
-.search-button h3{
-    font-size: 20px;
-    padding-left: 60px;
+.search-button h3 {
+  font-size: 20px;
+  padding-left: 60px;
 }
 
 /* Font Awesome アイコンのスタイル */
 .fa-search {
-    font-size: 20px;
-    display: inline-block;
-    font-family: "Font Awesome 6 Solid"; /* 使用するフォントの指定 */
-    font-weight: 900;
+  font-size: 20px;
+  display: inline-block;
+  font-family: "Font Awesome 6 Solid";
+  /* 使用するフォントの指定 */
+  font-weight: 900;
 }
 
 
@@ -301,19 +308,19 @@ body {
 
 
 /* 応募後の流れ-------------------------------------- */
-.after{
+.after {
   margin: 70px 0px 10px 0px;
   text-align: center;
 }
 
-.after button{
-  background-color: rgb(186,218,84);
+.after button {
+  background-color: rgb(186, 218, 84);
   border-radius: 50px;
   padding: 20px;
   width: 40%;
 }
 
-.after h3{
+.after h3 {
   font-size: 20px;
   color: white;
 }
@@ -323,158 +330,169 @@ body {
 
 /*おすすめ求人ーーーーーーーーーーーーーーーーーーーーーーーーー*/
 #slideshow-wrapper {
-    width: 100%;
-  }
+  width: 100%;
+}
 
 
-  .slide-inner{
-    width: 1000px;
-    margin: 0 auto;
-    margin-top: 30px;
-    position: relative;
-    margin-bottom: 70px;
-  }
-  
-  .slideshow-container {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-  }
+.slide-inner {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 70px;
+}
 
-  #slideshow-wrapper h2 {
-    font-size: 40px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 500;
-  }
-  
-  #slideshow-wrapper h4 {
-    font-size: 16px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.54);
-    letter-spacing: normal;
-    margin-top: 10px;
-    padding: 10px 0px 50px;
-  }
-  
-  .slide {
-    font-size: 15px;
-    display: inline-block;
-    text-align: center;
-    white-space: normal; /* 幅で改行する */
-    text-align: left;
-  }
+.slideshow-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
-  .slide a{
-    text-decoration: none;
-    color: black;
-  }
-  
-  .slide img {
-    width: 314px;
-    height: 201px;
-  }
-  
-  .caption {
-    margin-top: 10px;
-    width: 94%;
-  }
-  
+#slideshow-wrapper h2 {
+  font-size: 40px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+}
 
-  .slide:hover {
-    opacity: 0.9;
-  }
-  
-  .slide:hover img {
-    opacity: 0.9; /* ホバー時の画像の透明度を変化させる */
-  }
-  
+#slideshow-wrapper h4 {
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.54);
+  letter-spacing: normal;
+  margin-top: 10px;
+  padding: 10px 0px 50px;
+}
 
-  #slideshow-wrapper .highlight {
-    display: block;
-    width: 10%;
-    height: 3px;
-    background-color: rgb(186,218,84);
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
+.slide {
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
+  white-space: normal;
+  /* 幅で改行する */
+  text-align: left;
+}
+
+.slide a {
+  text-decoration: none;
+  color: black;
+}
+
+.slide img {
+  width: 314px;
+  height: 201px;
+}
+
+.caption {
+  margin-top: 10px;
+  width: 94%;
+}
 
 
+.slide:hover {
+  opacity: 0.9;
+}
+
+.slide:hover img {
+  opacity: 0.9;
+  /* ホバー時の画像の透明度を変化させる */
+}
 
 
-  /*矢印ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+#slideshow-wrapper .highlight {
+  display: block;
+  width: 10%;
+  height: 3px;
+  background-color: rgb(186, 218, 84);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 
-  
-  /* デフォルトの矢印を非表示にする */
+
+
+
+/*矢印ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+
+
+/* デフォルトの矢印を非表示にする */
 .slick-slider .slick-arrow {
-    display: none;
-  }
-  
-  /* カスタムの矢印のスタイルを指定 */
-  .slick-arrow {
-    position: absolute;
-    top: 55% !important;
-    transform: translateY(-50%) !important;
-    background-color: rgb(186,218,84) !important; /* 背景色を透明に設定 */
-    width: 50px !important; /* 矢印の幅を大きくする */
-    height: 50px !important; /* 矢印の高さを大きくする */
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%; /* 丸くするためのborder-radiusを設定 */
-  }
-  
-  /* 左矢印ボタン */
-  .slick-prev {
-    left: 3px !important;
-    top: 100px !important;
-  }
-  
-  /* 右矢印ボタン */
-  .slick-next {
-    right: 20px !important;
-    top: 100px !important;
-  }
-  
-  /* 矢印の棒のスタイル */
-  .slick-arrow::before, .slick-arrow::after {
-    content: "" !important;
-    position: absolute;
-    width: 15px; /* 矢印の幅を調整する */
-    height: 2px; /* 矢印の高さを調整する */
-    background-color: black;
-    top: 50%;
-    left: 50%;
-    transform-origin: center; /* 回転の中心を中央に設定 */
-  }
-  
-  /* 左矢印の棒の位置 */
-  .slick-prev::before {
-    transform: translate(-50%, -180%) rotate(-45deg) !important;
-  }
-  
-  .slick-prev::after {
-    transform: translate(-50%, 320%) rotate(45deg) !important;
-  }
-  
-  /* 右矢印の棒の位置 */
-  .slick-next::before {
-    transform: translate(-50%, -180%) rotate(45deg) !important;
-  }
-  
-  .slick-next::after {
-    transform: translate(-50%, 320%) rotate(-45deg) !important;
-  }
-  
-  /* 不等号のような矢印 */
-  .slick-prev::before, .slick-next::before {
-    content: none;
-  }
-  
+  display: none;
+}
+
+/* カスタムの矢印のスタイルを指定 */
+.slick-arrow {
+  position: absolute;
+  top: 55% !important;
+  transform: translateY(-50%) !important;
+  background-color: rgb(186, 218, 84) !important;
+  /* 背景色を透明に設定 */
+  width: 50px !important;
+  /* 矢印の幅を大きくする */
+  height: 50px !important;
+  /* 矢印の高さを大きくする */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* 丸くするためのborder-radiusを設定 */
+}
+
+/* 左矢印ボタン */
+.slick-prev {
+  left: 3px !important;
+  top: 100px !important;
+}
+
+/* 右矢印ボタン */
+.slick-next {
+  right: 20px !important;
+  top: 100px !important;
+}
+
+/* 矢印の棒のスタイル */
+.slick-arrow::before,
+.slick-arrow::after {
+  content: "" !important;
+  position: absolute;
+  width: 15px;
+  /* 矢印の幅を調整する */
+  height: 2px;
+  /* 矢印の高さを調整する */
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  /* 回転の中心を中央に設定 */
+}
+
+/* 左矢印の棒の位置 */
+.slick-prev::before {
+  transform: translate(-50%, -180%) rotate(-45deg) !important;
+}
+
+.slick-prev::after {
+  transform: translate(-50%, 320%) rotate(45deg) !important;
+}
+
+/* 右矢印の棒の位置 */
+.slick-next::before {
+  transform: translate(-50%, -180%) rotate(45deg) !important;
+}
+
+.slick-next::after {
+  transform: translate(-50%, 320%) rotate(-45deg) !important;
+}
+
+/* 不等号のような矢印 */
+.slick-prev::before,
+.slick-next::before {
+  content: none;
+}
+
 
 
 /*ドットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -482,28 +500,33 @@ body {
 
 
 .slick-dots button {
-    background-color: transparent; /* 背景を透明に設定 */
-    width: 8px;
-    height: 8px;
-    border: 2px solid yellow ; /* ドットの本体を黄色にする */
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 1px !important;
+  background-color: transparent;
+  /* 背景を透明に設定 */
+  width: 8px;
+  height: 8px;
+  border: 2px solid yellow;
+  /* ドットの本体を黄色にする */
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 1px !important;
 }
 
 /* 選択されているドットのスタイル */
 .slick-dots button.slick-active {
-    background-color: yellow !important; /* 選択されているドットの背景を黄色に設定 */
-    border-color: yellow !important; /* 選択されているドットのボーダーを黄色に設定 */
+  background-color: yellow !important;
+  /* 選択されているドットの背景を黄色に設定 */
+  border-color: yellow !important;
+  /* 選択されているドットのボーダーを黄色に設定 */
 }
 
 
 
 
 
-  /* ドット同士の横の感覚を狭くする */
+/* ドット同士の横の感覚を狭くする */
 .slick-dots li {
-  margin-right: -1px !important; /* ドット同士の横の感覚を調整する値 */
+  margin-right: -1px !important;
+  /* ドット同士の横の感覚を調整する値 */
 }
 
 
@@ -520,7 +543,7 @@ body {
 }
 
 
-.slide-inner-2{
+.slide-inner-2 {
   width: 1000px;
   margin: 0 auto;
   margin-top: 10px;
@@ -554,13 +577,14 @@ body {
   font-size: 15px;
   display: inline-block;
   text-align: center;
-  white-space: normal; /* 幅で改行する */
+  white-space: normal;
+  /* 幅で改行する */
   text-align: left;
 }
 
 
 
-.slide-2 a{
+.slide-2 a {
   text-decoration: none;
   color: black;
 }
@@ -568,7 +592,7 @@ body {
 
 .slide-2 img {
   width: 314px;
-height: 201px;
+  height: 201px;
 }
 
 .caption-2 {
@@ -582,7 +606,8 @@ height: 201px;
 }
 
 .slide-2:hover img {
-  opacity: 0.9; /* ホバー時の画像の透明度を変化させる */
+  opacity: 0.9;
+  /* ホバー時の画像の透明度を変化させる */
 }
 
 
@@ -590,7 +615,7 @@ height: 201px;
   display: block;
   width: 10%;
   height: 3px;
-  background-color: rgb(186,218,84);
+  background-color: rgb(186, 218, 84);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -613,15 +638,19 @@ height: 201px;
   position: absolute;
   top: 55% !important;
   transform: translateY(-50%) !important;
-  background-color: rgb(186,218,84) !important; /* 背景色を透明に設定 */
-  width: 50px !important; /* 矢印の幅を大きくする */
-  height: 50px !important; /* 矢印の高さを大きくする */
+  background-color: rgb(186, 218, 84) !important;
+  /* 背景色を透明に設定 */
+  width: 50px !important;
+  /* 矢印の幅を大きくする */
+  height: 50px !important;
+  /* 矢印の高さを大きくする */
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; /* 丸くするためのborder-radiusを設定 */
+  border-radius: 50%;
+  /* 丸くするためのborder-radiusを設定 */
 }
 
 /* 左矢印ボタン */
@@ -638,15 +667,19 @@ height: 201px;
 }
 
 /* 矢印の棒のスタイル */
-.slick-arrow-2::before, .slick-arrow-2::after {
+.slick-arrow-2::before,
+.slick-arrow-2::after {
   content: "" !important;
   position: absolute;
-  width: 15px; /* 矢印の幅を調整する */
-  height: 2px; /* 矢印の高さを調整する */
+  width: 15px;
+  /* 矢印の幅を調整する */
+  height: 2px;
+  /* 矢印の高さを調整する */
   background-color: black;
   top: 50%;
   left: 50%;
-  transform-origin: center; /* 回転の中心を中央に設定 */
+  transform-origin: center;
+  /* 回転の中心を中央に設定 */
 }
 
 /* 左矢印の棒の位置 */
@@ -668,7 +701,8 @@ height: 201px;
 }
 
 /* 不等号のような矢印 */
-.slick-prev-2::before, .slick-next-2::before {
+.slick-prev-2::before,
+.slick-next-2::before {
   content: none;
 }
 
@@ -679,32 +713,38 @@ height: 201px;
 /*ドットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 /* ドットのボタン */
 .slick-dots-2 button {
-  background-color: transparent; /* 背景を透明に設定 */
+  background-color: transparent;
+  /* 背景を透明に設定 */
   width: 8px;
   height: 8px;
-  border: 2px solid yellow ; /* ドットの本体を黄色にする */
+  border: 2px solid yellow;
+  /* ドットの本体を黄色にする */
   border-radius: 50%;
   cursor: pointer;
 }
 
 /* 選択されているドットのスタイル */
 .slick-dots-2 button.slick-active-2 {
-  background-color: yellow !important; /* 選択されているドットの背景を黄色に設定 */
-  border-color: yellow !important; /* 選択されているドットのボーダーを黄色に設定 */
+  background-color: yellow !important;
+  /* 選択されているドットの背景を黄色に設定 */
+  border-color: yellow !important;
+  /* 選択されているドットのボーダーを黄色に設定 */
 }
 
 
-.slick-active-2 button li{
-  background-color: tan !important; /* 選択されていないドットの背景を灰色に設定 */
+.slick-active-2 button li {
+  background-color: tan !important;
+  /* 選択されていないドットの背景を灰色に設定 */
 }
 
 
 
-  /* ドット同士の横の感覚を狭くする */
-  .slick-dots-2 li {
-    margin-right: -1px !important; /* ドット同士の横の感覚を調整する値 */
-  }
-  
+/* ドット同士の横の感覚を狭くする */
+.slick-dots-2 li {
+  margin-right: -1px !important;
+  /* ドット同士の横の感覚を調整する値 */
+}
+
 
 
 
@@ -713,148 +753,167 @@ height: 201px;
 /*人気のカテゴリーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 #popular .popular-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* アイテム間のスペースを均等に配置 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* アイテム間のスペースを均等に配置 */
 }
 
 
-  
-  .popular-container{
-    justify-content: space-between;
-    width: 900px;
-    margin: 0 auto;
-    padding: 80px 0px;
-  }
-  
-  
-  .popular-container img{
-    width: 235px;
-    height: 260px;
-  }
-  
-  .popular-container h5{
-    padding: 110px 0px 0px 0px;
-    font-size: 20px;
-    margin: 0 auto;
-  }
 
-  .card-1,
+.popular-container {
+  justify-content: space-between;
+  width: 900px;
+  margin: 0 auto;
+  padding: 80px 0px;
+}
+
+
+.popular-container img {
+  width: 235px;
+  height: 260px;
+}
+
+.popular-container h5 {
+  padding: 110px 0px 0px 0px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.card-1,
 .card-2,
 .card-3,
 .card-4 {
-    flex-basis: calc(50% - 10px); /* 幅を50%に設定し、間隔を考慮 */
-    margin-bottom: 30px; /* 下部のマージンを追加 */
-    box-sizing: border-box; /* パディングを要素の幅に含める */
+  flex-basis: calc(50% - 10px);
+  /* 幅を50%に設定し、間隔を考慮 */
+  margin-bottom: 30px;
+  /* 下部のマージンを追加 */
+  box-sizing: border-box;
+  /* パディングを要素の幅に含める */
 }
 
 .card-1 a,
 .card-2 a,
 .card-3 a,
 .card-4 a {
-    flex-basis: calc(50% - 10px); /* 幅を50%に設定し、間隔を考慮 */
-    margin-bottom: 0px; /* 下部のマージンを追加 */
-    box-sizing: border-box; /* パディングを要素の幅に含める */
-    display: flex;
-    text-decoration: none;
-    color: white;
+  flex-basis: calc(50% - 10px);
+  /* 幅を50%に設定し、間隔を考慮 */
+  margin-bottom: 0px;
+  /* 下部のマージンを追加 */
+  box-sizing: border-box;
+  /* パディングを要素の幅に含める */
+  display: flex;
+  text-decoration: none;
+  color: white;
 }
-  
-  .card-1{
-    align-items: center;
-    text-align: center;
-    background-color: #0D44A6;
-  }
-  
-  
-  .card-2{
-    align-items: center; /* 要素を垂直方向に中央に配置 */
-    text-align: center;
-    background-color: #13AF67;
-  
-  }
-  
-  
-  .card-3{
-    align-items: center; /* 要素を垂直方向に中央に配置 */
-    text-align: center;
-    background-color: #6EB5E3;
-  
-  }
-  
-  
-  .card-4{
-    align-items: center; /* 要素を垂直方向に中央に配置 */
-    text-align: center;
-    background-color: #FD7433;
-  
-  }
-  
-  
-  
-  .card-1:hover {
-    background-color: #0D44A6; /* ホバー時の背景色 */
-    opacity: 0.8;
-  }
-  
-  .card-2:hover {
-    background-color: #13AF67; /* ホバー時の背景色 */
-    opacity: 0.8;
-  }
-  
-  .card-3:hover {
-    background-color: #6EB5E3; /* ホバー時の背景色 */
-    opacity: 0.8;
-  }
-  
-  .card-4:hover {
-    background-color: #FD7433;; /* ホバー時の背景色 */
-    opacity: 0.8;
-  }
-  
-  .flow-text{
-    text-align: center;
-  }
 
-  .flow-text h3 {
-    position: relative;
-    display: inline-block;
-    font-size: 30px;
-    padding: 0px 100px;
+.card-1 {
+  align-items: center;
+  text-align: center;
+  background-color: #0D44A6;
+}
+
+
+.card-2 {
+  align-items: center;
+  /* 要素を垂直方向に中央に配置 */
+  text-align: center;
+  background-color: #13AF67;
+
+}
+
+
+.card-3 {
+  align-items: center;
+  /* 要素を垂直方向に中央に配置 */
+  text-align: center;
+  background-color: #6EB5E3;
+
+}
+
+
+.card-4 {
+  align-items: center;
+  /* 要素を垂直方向に中央に配置 */
+  text-align: center;
+  background-color: #FD7433;
+
+}
+
+
+
+.card-1:hover {
+  background-color: #0D44A6;
+  /* ホバー時の背景色 */
+  opacity: 0.8;
+}
+
+.card-2:hover {
+  background-color: #13AF67;
+  /* ホバー時の背景色 */
+  opacity: 0.8;
+}
+
+.card-3:hover {
+  background-color: #6EB5E3;
+  /* ホバー時の背景色 */
+  opacity: 0.8;
+}
+
+.card-4:hover {
+  background-color: #FD7433;
+  ;
+  /* ホバー時の背景色 */
+  opacity: 0.8;
+}
+
+.flow-text {
+  text-align: center;
+}
+
+.flow-text h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  padding: 0px 100px;
 }
 
 .flow-text h3::before,
 .flow-text h3::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 30%; /* 50%の線を設定 */
-    border-top: 3px solid black; /* 線のスタイルを設定 */
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  /* 50%の線を設定 */
+  border-top: 3px solid black;
+  /* 線のスタイルを設定 */
 }
 
 .flow-text h3::before {
-    left: 20px;
-    transform: translateX(-50%); /* テキストの幅に合わせて線を調整 */
+  left: 20px;
+  transform: translateX(-50%);
+  /* テキストの幅に合わせて線を調整 */
 }
 
 .flow-text h3::after {
-    right: 20px;
-    transform: translateX(50%); /* テキストの幅に合わせて線を調整 */
+  right: 20px;
+  transform: translateX(50%);
+  /* テキストの幅に合わせて線を調整 */
 }
 
-.flow-text p{
+.flow-text p {
   padding: 30px 0px;
   font-size: 20px;
 }
 
-.flow-about{
+.flow-about {
   width: 600px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 80px;
 }
 
-.flow-about h3{
+.flow-about h3 {
   padding-top: 30px;
   width: 400px;
   border-bottom: 2px solid black;
@@ -862,25 +921,25 @@ height: 201px;
   margin: 0 auto;
 }
 
-.flow-about-text{
+.flow-about-text {
   margin-top: 50px;
   background-color: rgb(226, 221, 221);
 }
 
-.flow-about-text h4{
+.flow-about-text h4 {
   text-align: left;
   background-color: #6EB5E3;
   width: 80px;
-  padding-left:15px;
+  padding-left: 15px;
 }
 
-.flow-about-text p{
+.flow-about-text p {
   padding: 40px 0px;
   font-weight: bold;
   font-size: 20px;
 }
 
-.fa-solid{
+.fa-solid {
   font-size: 70px;
   padding: 20px 0px;
 }
@@ -889,86 +948,302 @@ height: 201px;
 /*テーブルーーーーーーーーーーーーーーーーーー*/
 
 table {
-  width: 100%; /* テーブル全体の幅を100%に設定 */
+  width: 100%;
+  /* テーブル全体の幅を100%に設定 */
   margin-top: 40px;
 }
 
 td {
-  border: 1px solid black; /* セルの境界線を描画 */
-  padding: 15px; /* セル内の余白を設定 */
+  border: 1px solid black;
+  /* セルの境界線を描画 */
+  padding: 15px;
+  /* セル内の余白を設定 */
 }
 
 .wider {
-  width: 70%; /* 右の列の幅を70%に設定 */
+  width: 70%;
+  /* 右の列の幅を70%に設定 */
 }
 
 .highlighted-row {
-  background-color: lightblue; /* 水色の背景色を設定 */
+  background-color: lightblue;
+  /* 水色の背景色を設定 */
 }
 
 
 
 /*フッターーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-footer{
-    background-color: rgb(186,218,84);
+footer {
+  background-color: rgb(186, 218, 84);
+}
+
+.footer-inner {
+  padding: 30px 0px;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-name {
+  color: white;
+}
+
+.footer-site {
+  background-color: white;
+  color: rgb(186, 218, 84);
+  border-radius: 40px;
+}
+
+.footer-company-neme {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.policy {
+  padding-top: 10px;
+}
+
+.link {
+  padding-top: 10px;
+}
+
+/*スクロールボタンーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+
+/* ボタンのスタイル */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgb(186, 218, 84);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+/* ボタンの中に不等号のような矢印のスタイル */
+.scroll-to-top-button i {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 50px;
+  color: black;
+}
+
+/* ボタンのホバー時のスタイル */
+.scroll-to-top-button:hover {
+  background-color: rgb(186, 218, 84);
+}
+
+
+#category-form {
+  display: block;
+}
+
+#search-button {
+  display: none;
+}
+
+/* タブレット */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+
+
+  .inner,
+  .search-container,
+  .search-select,
+  .popular-container,
+  .slide,
+  .slide-2 {
+    width: 100%;
   }
-  
-  .footer-inner{
-    padding: 30px 0px;
-    width: 20%;
+
+  .search-input {
+    width: 90%;
+  }
+
+  .new-jobs-button,
+  .search-button,
+  .after button {
+    width: auto;
+    padding: 10px 30px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .keyword-search,
+  .area-search,
+  .search-button {
+    flex-basis: 100%;
+  }
+
+  .popular-container {
+    flex-direction: column;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    flex-basis: 100%;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+
+  .slide-inner {
+    width: 100%;
+  }
+
+  .slide-inner-2 {
+    width: 100%;
+  }
+
+  .nav-button {
+    font-size: 10px !important;
+    padding: 8px 4px !important;
+  }
+
+  .button-group {
+    justify-content: space-around !important;
+  }
+
+  .title-bar img {
+    height: auto;
+  }
+
+}
+
+
+/* スマホ */
+@media (max-width: 768px) {
+
+
+
+  .header-name,
+  .inner,
+  .nav-button,
+  .search-container,
+  .popular-container,
+  .slide,
+  .slide-2 {
+    width: 100%;
+    padding: 0;
     margin: 0 auto;
-    text-align: center;
   }
 
-  .footer-name{
-    color: white;
+  .new-jobs-button,
+  .search-button,
+  .after button {
+    width: auto;
+    padding: 10px 20px;
   }
 
-  .footer-site{
-    background-color: white;
-    color: rgb(186,218,84);
-    border-radius: 40px;
+  .dropdown-menu {
+    width: 100%;
   }
 
-  .footer-company-neme{
-    font-weight: 900;
-    font-size: 40px;
+  .nav-list li,
+  .button-group {
+    flex-direction: column;
   }
 
-  .policy{
-    padding-top: 10px;
+  .search-container {
+    flex-direction: column;
+    margin-left: 0;
   }
 
-  .link{
-    padding-top: 10px;
+  .keyword-search,
+  .area-search,
+  .search-button {
+    flex-basis: 100%;
   }
 
-  /*スクロールボタンーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-  
-  
-  /* ボタンのスタイル */
-  .scroll-to-top-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: rgb(186,218,84);
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
+  .popular-container {
+    flex-direction: column;
   }
-  
-  /* ボタンの中に不等号のような矢印のスタイル */
-  .scroll-to-top-button i {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 50px;
-    color: black;
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    flex-basis: 100%;
   }
-  
-  /* ボタンのホバー時のスタイル */
-  .scroll-to-top-button:hover {
-    background-color: rgb(186,218,84);
+
+  .slide-inner {
+    width: 100%;
   }
-  
+
+  .slide-inner-2 {
+    width: 100%;
+  }
+
+
+
+  .nav-button {
+    width: auto;
+  }
+
+  .nav-list {
+    display: contents !important;
+  }
+
+  .header-name {
+    width: 80% !important;
+  }
+
+  #category-form {
+    display: none;
+  }
+
+  #search-button {
+    display: block;
+    padding: 5px;
+    margin-right: 8px;
+    margin-left: auto;
+    margin-bottom: 7px;
+    font-weight: 700;
+    background-color: rgb(186, 218, 84);
+    border-radius: 50px;
+  }
+
+  .title-bar {
+    padding: 0;
+  }
+
+  .title-bar img {
+    height: auto;
+  }
+
+  .search-input {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .search-select {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .search-all h3 {
+    padding: 0;
+  }
+
+  .search-button {
+    margin: 0;
+  }
+
+  .footer-inner {
+    width: 90% !important;
+  }
+}

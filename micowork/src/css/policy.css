@@ -170,3 +170,14 @@ footer{
     background-color: rgb(186,218,84);
   }
   
+
+    /* タブレット */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .footer-inner {
+        padding: 30px 0px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+ 
+    }

@@ -173,8 +173,8 @@ body {
 }
 
 .title-bar img{
-  padding-left: 200px;
-  width: 1000px;
+margin: 0 auto;
+  width: 90%;
   height: 100px;
 }
 
@@ -972,3 +972,80 @@ footer{
     background-color: rgb(186,218,84);
   }
   
+
+  /* タブレット */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .header-name, .inner, .nav-button, .search-container, .search-input, .search-select, .popular-container, .slide, .slide-2 {
+        width: 100%;
+    }
+
+    .new-jobs-button, .search-button, .after button {
+        width: auto;
+        padding: 10px 30px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    .nav-list li, .button-group {
+        flex-direction: column;
+    }
+
+    .search-container {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .keyword-search, .area-search, .search-button {
+        flex-basis: 100%;
+    }
+
+    .popular-container {
+        flex-direction: column;
+    }
+
+    .card-1, .card-2, .card-3, .card-4 {
+        flex-basis: 100%;
+    }
+}
+
+
+/* スマホ */
+@media (max-width: 768px) {
+  .header-name, .inner, .nav-button, .search-container, .search-input, .search-select, .popular-container, .slide, .slide-2 {
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+  }
+
+  .new-jobs-button, .search-button, .after button {
+      width: auto;
+      padding: 10px 20px;
+  }
+
+  .dropdown-menu {
+      width: 100%;
+  }
+
+  .nav-list li, .button-group {
+      flex-direction: column;
+  }
+
+  .search-container {
+      flex-direction: column;
+      margin-left: 0;
+  }
+
+  .keyword-search, .area-search, .search-button {
+      flex-basis: 100%;
+  }
+
+  .popular-container {
+      flex-direction: column;
+  }
+
+  .card-1, .card-2, .card-3, .card-4 {
+      flex-basis: 100%;
+  }
+}
